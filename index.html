@@ -113,6 +113,7 @@
     </section>
   </main>
 
+  <button class="chat-button"><img class="chat-button__icon" src="./images/chat.png"></button>
 
 
   <div class="chat-popup">
@@ -125,6 +126,8 @@
     <div class="chat-popup__message-area">
       <p class="chat-popup__time">TODAY AT 11:35</p>
       <div class="chat-popup__messages">
+
+        <template id="incoming-message-template">
         <div class="incoming-message">
           <img class="incoming-message__img" src="./images/mila.png">
           <div class="incoming-message__container">
@@ -132,6 +135,9 @@
           </div>
           <p class="incoming-message__time">3 minutes ago</p>
         </div>
+        </template>
+
+        <template id="outgoing-message-template">
         <div class="outgoing-message">
           <img class="outgoing-message__img" src="./images/user.webp">
           <div class="outgoing-message__container">
@@ -139,11 +145,13 @@
           </div>
           <p class="outgoing-message__time">3 minutes ago</p>
         </div>
+        </template>
+
       </div>
-      <div class="chat-popup__input-container">
-        <button class="chat-popup__send-btn"><img class="chat-popup__send-icon" src="./images/message-send.png"></button>
-        <input class="chat-popup__message-input" placeholder="Type a message...">
-      </div>
+      <form class="chat-popup__input-container" method="POST" name="message-form">
+        <button type="submit" class="chat-popup__send-btn"><img class="chat-popup__send-icon" src="./images/message-send.png"></button>
+        <input class="chat-popup__message-input" placeholder="Type a message..." minlength="1" required>
+      </form>
     </div>
   </div>
 

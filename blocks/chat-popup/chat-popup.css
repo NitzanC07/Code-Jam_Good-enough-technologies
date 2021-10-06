@@ -1,6 +1,7 @@
 .chat-popup {
+  max-height: 800px;
   background-color: #f5f4f4;
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
 }

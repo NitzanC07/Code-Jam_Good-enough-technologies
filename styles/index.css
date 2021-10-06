@@ -75,3 +75,5 @@
 @import url(../blocks/outgoing-message/__img/outgoing-message__img.css);
 @import url(../blocks/outgoing-message/__text/outgoing-message__text.css);
 @import url(../blocks/outgoing-message/__time/outgoing-message__text.css);
+@import url(../blocks/opened/opened.css);
+@import url(../blocks/chat-button/chat-button.css);
