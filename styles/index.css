@@ -39,6 +39,7 @@
 @import url(../blocks/cards/__card/__description-container/cards__card__description-container.css);
 @import url(../blocks/cards/__card/__description/cards__card__description.css);
 @import url(../blocks/cards/__card/__see-all/cards__see-all.css);
+@import url(../blocks/cards/__sort-button/cards__sort-button.css);
 
 @import url(../blocks/description/description.css);
 @import url(../blocks/description/__title/description__title.css);
