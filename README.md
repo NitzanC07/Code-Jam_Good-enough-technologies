@@ -10,5 +10,10 @@ We made a website called StudyBuddy that should help likeminded individuals who 
 * CSS
 * Java Script
 
+## Team
+* Katy Rysik (designer).
+* Simon Sherbinin (developer).
+* Nitzan Cohen (developer).
+
 ## Github Pages link:
 [Study Buddy](https://nitzanc07.github.io/Code-Jam_Good-enough-technologies/)
