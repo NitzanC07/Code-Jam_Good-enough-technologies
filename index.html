@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="./pages/index.css">
   <link rel="shortcut icon" type="image/jpg" href="http://cdn.onlinewebfonts.com/svg/img_29736.png">
   <title>STUDYBUDDY</title>
 </head>
@@ -25,9 +24,24 @@
       <div class="header__buttons">
         <button class="header__settings"><img class="header__settings-icon" src="./images/gear.png"></button>
         <button class="header__profile"><img class="header__profile-icon" src="./images/user.webp"></button>
+        <div class="profile-popup">
+          <div class="profile-popup__info-container">
+            <img class="profile-popup__img" src="./images/user.webp">
+            <h3 class="profile-popup__name">Leio Mclaren</h3>
+            <p class="profile-popup__mail">leilomc@mail.com</p>
+          </div>
+          <div class="profile-popup__links">
+            <a class="profile-popup__link">Profile Settings</a>
+            <a class="profile-popup__link">Messages</a>
+            <a class="profile-popup__link">Security</a>
+            <a class="profile-popup__link">Log Out</a>
+          </div>
+        </div>
       </div>
     </div>
+
   </header>
+
   <main class="content">
     <div class="cover">
       <h2 class="cover__title">Find motivated friends<br>and learn new skills together</h2>
@@ -111,19 +125,7 @@
   </main>
 >>>>>>> 82bb863432c5f8ebac7b041a41933530c839bfd3
 
-  <div class="profile-popup">
-    <div class="profile-popup__info-container">
-      <img class="profile-popup__img" src="./images/user.webp">
-      <h3 class="profile-popup__name">Leio Mclaren</h3>
-      <p class="profile-popup__mail">leilomc@mail.com</p>
-    </div>
-    <div class="profile-popup__links">
-      <a class="profile-popup__link">Profile Settings</a>
-      <a class="profile-popup__link">Messages</a>
-      <a class="profile-popup__link">Security</a>
-      <a class="profile-popup__link">Log Out</a>
-    </div>
-  </div>
+
 
   <div class="chat-popup">
     <div class="chat-popup__info-area">
@@ -136,21 +138,24 @@
       <p class="chat-popup__time">TODAY AT 11:35</p>
       <div class="chat-popup__messages">
         <div class="incoming-message">
-          <img class="incoming-message__img">
+          <img class="incoming-message__img" src="./images/mila.png">
           <div class="incoming-message__container">
             <p class="incoming-message__text">Hello! How are you?</p>
           </div>
           <p class="incoming-message__time">3 minutes ago</p>
         </div>
         <div class="outgoing-message">
-          <img class="outgoing-message__img">
+          <img class="outgoing-message__img" src="./images/user.webp">
           <div class="outgoing-message__container">
             <p class="outgoing-message__text">Hello nice to meet you, I'm fine!<br>Tell me about yourself.</p>
           </div>
           <p class="outgoing-message__time">3 minutes ago</p>
         </div>
       </div>
-      <input class="chat-popup__message-input">
+      <div class="chat-popup__input-container">
+        <button class="chat-popup__send-btn"><img class="chat-popup__send-icon" src="./images/message-send.png"></button>
+        <input class="chat-popup__message-input" placeholder="Type a message...">
+      </div>
     </div>
   </div>
 

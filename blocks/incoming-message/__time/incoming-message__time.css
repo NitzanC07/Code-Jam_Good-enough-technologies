@@ -1,0 +1,8 @@
+.incoming-message__time {
+  margin: 0;
+  font-family: "Mulish Regular", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: 0.2px;
+  grid-area: time;
+}
