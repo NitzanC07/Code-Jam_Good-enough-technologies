@@ -1,0 +1,13 @@
+.cover__button-find {
+  font-family: "Mulish Bold", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+  margin-right: 20px;
+  width: 128px;
+  height: 42px;
+  background-color: #4D4D4E;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

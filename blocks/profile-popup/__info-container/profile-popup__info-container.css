@@ -1,0 +1,5 @@
+.profile-popup__info-container {
+  margin: 30px;
+  display: grid;
+  grid-template-areas: "img name" "img mail";
+}

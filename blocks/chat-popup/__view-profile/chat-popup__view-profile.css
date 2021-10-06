@@ -1,0 +1,9 @@
+.chat-popup__view-profile {
+  margin: 0;
+  font-family: "Mulish Regular", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+  grid-area: profile;
+}

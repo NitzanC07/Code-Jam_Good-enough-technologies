@@ -1,0 +1,5 @@
+.profile-popup__links {
+  margin: 0 32px 29px 30px;
+  display: flex;
+  flex-direction: column;
+}

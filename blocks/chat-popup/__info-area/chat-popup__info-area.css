@@ -1,0 +1,6 @@
+.chat-popup__info-area {
+  padding: 30px 70px 30px 20px;
+  display: grid;
+  grid-template-areas: "img name" "img description" "img profile";
+  background-color: #E0E0E0;
+}

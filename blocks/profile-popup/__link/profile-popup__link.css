@@ -1,0 +1,12 @@
+.profile-popup__link {
+  margin: 0 0 24px;
+  font-family: "Mulish Regular", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2x;
+  cursor: pointer;
+}
+
+.profile-popup__link:last-of-type {
+  margin: 0 0 29px;
+}
