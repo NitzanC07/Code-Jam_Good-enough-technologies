@@ -1,33 +1,7 @@
 import { Card } from "./Card.js"
 import OutgoingMessage from "./OutgoingMessage.js";
+import { initialCards } from "./initialCards.js";
 
-const initalCard = [{
-    imageSrc: "./images/image.svg",
-    imageAlt: "Profile picture",
-    title: "User Name",
-    subtitle: "Student at Yandex Praktikum",
-    contentTag: ["interest", "interest", "interest", "interest"],
-    description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
-  },
-  {
-    imageSrc: "./images/image.svg",
-    imageAlt: "Profile picture",
-    title: "User Name",
-    subtitle: "Student at Yandex Praktikum",
-    contentTag: ["interest", "interest", "interest", "interest"],
-    description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
-  },
-  {
-    imageSrc: "./images/image.svg",
-    imageAlt: "Profile picture",
-    title: "User Name",
-    subtitle: "Student at Yandex Praktikum",
-    contentTag: ["interest", "interest", "interest", "interest"],
-    description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
-  }
-]
-
-const cardTemplate = document.querySelector("#card-template").content;
 const cardsContainer = document.querySelector(".cards__container");
 const profilePopup = document.querySelector('.profile-popup');
 const profileSettingsBtn = document.querySelector('.header__settings');
@@ -36,15 +10,26 @@ const chatWindow = document.querySelector('.chat-popup');
 const chatPopupContainer = document.querySelector('.chat-popup__input-container');
 const chatPopupInput = document.querySelector('.chat-popup__message-input');
 const messagesContainer = document.querySelector('.chat-popup__messages');
-const userImage = "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
+const userImage = document.querySelector('.profile-popup__img').src;
+const chatTime = document.querySelector('.chat-popup__time');
+const chatBtnIcon = document.querySelector('.chat-button__icon');
+const settingIcon = document.querySelector('.header__settings-icon');
+const currentTime = new Date();
+chatTime.textContent = `TODAY AT ${currentTime.getHours()}:${currentTime.getMinutes()}`
 
+const createMessage = (content, image) => {
+  return new OutgoingMessage({ content: content, userImage: image, time: new Date() }).createMessage();
+}
 
 const toggleSettings = () => {
   profilePopup.classList.toggle('opened');
+  settingIcon.classList.toggle('rotate');
+
 }
 
 const toggleChat = () => {
   chatWindow.classList.toggle('opened');
+  chatBtnIcon.classList.toggle('rotate');
 }
 
 const scrollToBottom = () => {
@@ -53,8 +38,7 @@ const scrollToBottom = () => {
 
 const sendMessage = (evt) => {
   evt.preventDefault();
-  const newMessage = new OutgoingMessage({ content: chatPopupInput.value, userImage: userImage }).createMessage();
-  messagesContainer.append(newMessage);
+  messagesContainer.append(createMessage(chatPopupInput.value, userImage));
   chatPopupInput.value = "";
   scrollToBottom();
 }
@@ -62,14 +46,8 @@ const sendMessage = (evt) => {
 chatPopupContainer.addEventListener('submit', sendMessage);
 
 profileSettingsBtn.addEventListener('click', toggleSettings);
-chatBtn.addEventListener('click', toggleChat)
+chatBtn.addEventListener('click', toggleChat);
 
-function generateCard(data, cardTemplate) {
-  const card = new Card(data, cardTemplate);
-  return card.createCard();
-}
-
-initalCard.forEach((data) => {
-  const initCard = generateCard(data, cardTemplate);
-  cardsContainer.append(initCard);
-})
+initialCards.forEach((cardData) => {
+  cardsContainer.append(new Card(cardData).createCard());
+});

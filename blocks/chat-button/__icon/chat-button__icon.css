@@ -1,0 +1,6 @@
+.chat-button__icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.2s ease;
+}

@@ -3,5 +3,7 @@
   position: absolute;
   top: 40px;
   right: 95px;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s ease .3s, opacity .3s ease;
 }
