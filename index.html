@@ -5,37 +5,66 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stlesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./pages/index.css">
   <link rel="shortcut icon" type="image/jpg" href="http://cdn.onlinewebfonts.com/svg/img_29736.png">
   <title>STUDYBUDDY</title>
 </head>
 
 <body class="page">
-  <header class="header">
-    <h1 class="header__title">STUDDY BUDDY</h1>
-    <ul class="header__links">
-      <li class="header__link">Item one</li>
-      <li class="header__link">Item two</li>
-      <li class="header__link">Item three</li>
-      <li class="header__link">Item four</li>
-      <li class="header__link">Item five</li>
-    </ul>
-    <div class="header__profile-settings">
-      <button class="header__settings"><img class="header__settings-icon"></button>
-      <button class="header__profile"><img class="header__profile-icon"></button>
-    </div>
-  </header>
-  <main class="content">
-    <div class="cover">
-      <h2 class="cover__title">Find motivated friends and learn new skills together</h2>
-      <p class="cover__subtitle">Find your companion for productive learning. Share plants, experience, discuss, motivate and build new helpful connections with SUTDY BUDDY</p>
-      <div class="cover__button-row">
-        <button class="cover__button-find">Find a buddy</button>
-        <button class="cover__button-learn">Learn more</button>
+  <div class="page__container">
+
+    <header class="header">
+      <h1 class="header__title">STUDDY BUDDY</h1>
+      <ul class="header__links">
+        <li class="header__link">Item one</li>
+        <li class="header__link">Item two</li>
+        <li class="header__link">Item three</li>
+        <li class="header__link">Item four</li>
+        <li class="header__link">Item five</li>
+      </ul>
+      <div class="header__profile-settings">
+        <button class="header__settings"><img class="header__settings-icon"></button>
+        <button class="header__profile"><img class="header__profile-icon"></button>
       </div>
+    </header>
+    <main class="content">
+      <div class="cover">
+        <h2 class="cover__title">Find motivated friends and learn new skills together</h2>
+        <p class="cover__subtitle">Find your companion for productive learning. Share plants, experience, discuss, motivate and build new helpful connections with SUTDY BUDDY</p>
+        <div class="cover__button-row">
+          <button class="cover__button-find">Find a buddy</button>
+          <button class="cover__button-learn">Learn more</button>
+        </div>
+      </div>
+
+      <section class="cards">
+        <h2 class="cards__title">Name of program</h2>
+        <ul class="cards__container">
+          
+        </ul>
+        <a class="cards__see-all" href=#>See all</a>
+      </section>
+
+    </main>
+  </div>
+<template id="card-template">
+  <li class="cards__card">
+    <img class="cards__card__image" src="" alt="">
+    <button class="cards__card__contact-button"></button>
+    <h2 class="cards__card__title"></h2>
+    <p class="cards__card__subtitle"></p>
+    <div class="cards__card__tags">
+      <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
+      <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
+      <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
+      <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
     </div>
-  </main>
+    <div class="cards__card__description-container">
+      <p class="cards__card__description"></p>
+    </div>
+  </li>
+</template>
 
+<script type="module" src="./scripts/index.js"></script>
 </body>
-
 </html>
