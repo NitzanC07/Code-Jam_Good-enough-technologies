@@ -11,4 +11,4 @@ We made a website called StudyBuddy that should help likeminded individuals who 
 * Java Script
 
 ## Github Pages link:
-[Study Buddy]("https://nitzanc07.github.io/Code-Jam_Good-enough-technologies/")
+[Study Buddy](https://nitzanc07.github.io/Code-Jam_Good-enough-technologies/)
