@@ -1,0 +1,9 @@
+.profile-popup__name {
+  margin: 0 0 12px;
+  align-self: flex-end;
+  font-family: "Mulish Bold", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  grid-area: name;
+}

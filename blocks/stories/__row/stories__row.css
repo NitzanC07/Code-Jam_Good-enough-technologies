@@ -1,0 +1,5 @@
+.stories__row {
+  width: calc(1110/1440 * 100%);
+  display: flex;
+  justify-content: space-around;
+}
