@@ -18,7 +18,7 @@ const currentTime = new Date();
 chatTime.textContent = `TODAY AT ${currentTime.getHours()}:${currentTime.getMinutes()}`
 
 const createMessage = (content, image) => {
-  return new OutgoingMessage({ content: content, userImage: image, time: new Date() }).createMessage();
+  return new OutgoingMessage({ content: content, userImage: image, time: currentTime }).createMessage();
 }
 
 const toggleSettings = () => {
@@ -49,5 +49,9 @@ profileSettingsBtn.addEventListener('click', toggleSettings);
 chatBtn.addEventListener('click', toggleChat);
 
 initialCards.forEach((cardData) => {
-  cardsContainer.append(new Card(cardData).createCard());
+  cardsContainer.append(new Card(cardData, {
+    handleContactOpen: () => {
+      chatWindow.classList.add('opened');
+    }
+  }).createCard());
 });

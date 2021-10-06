@@ -1,13 +1,12 @@
-//const cardContactBtn = document.querySelector('.cards__card__contact-button');
-
 export class Card {
-  constructor(cardData, handleContactOpen) {
+  constructor(cardData, { handleContactOpen }) {
     this._cardData = cardData;
-    this._cardTemplate = document.querySelector('#card-template').content;
+    this._handleContactOpen = handleContactOpen;
+
   }
 
   _setEventListeners() {
-    //cardContactBtn.addEventListener('click', handleContactOpen);
+    this._contactBtn.addEventListener('click', this._handleContactOpen);
   }
 
   _getTemplate() {
@@ -24,6 +23,7 @@ export class Card {
     this._cardSubtitle = this._card.querySelector('.cards__card__subtitle');
     this._cardDescription = this._card.querySelector('.cards__card__description');
     this._tagArray = Array.from(this._card.querySelectorAll('.cards__card__content-tag'));
+    this._contactBtn = this._card.querySelector('.cards__card__contact-button');
   }
 
   createCard() {
