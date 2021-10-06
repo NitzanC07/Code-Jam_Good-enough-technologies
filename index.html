@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./pages/index.css">
   <link rel="shortcut icon" type="image/jpg" href="http://cdn.onlinewebfonts.com/svg/img_29736.png">
   <title>STUDYBUDDY</title>
 </head>
@@ -36,7 +37,16 @@
         <button class="cover__button-learn">Learn more</button>
       </div>
     </div>
-    <div class="description">
+
+    <section class="cards">
+      <h2 class="cards__title">Name of program</h2>
+      <ul class="cards__container">
+
+      </ul>
+      <a class="cards__see-all" href=#>See all</a>
+    </section>
+
+    <section class="description">
       <h2 class="description__title">How does it work?</h2>
       <div class="description__row">
         <div class="description-element">
@@ -55,8 +65,9 @@
           <p class="description-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
         </div>
       </div>
-    </div>
-    <div class="stories">
+    </section>
+
+    <section class="stories">
       <h2 class="stories__title">Stories from our members</h2>
       <div class="stories__row">
         <div class="stories-element">
@@ -84,7 +95,7 @@
             iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. </p>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <div class="profile-popup">
@@ -129,6 +140,26 @@
       <input class="chat-popup__message-input">
     </div>
   </div>
+
+  <template id="card-template">
+    <li class="cards__card">
+      <img class="cards__card__image" src="" alt="">
+      <button class="cards__card__contact-button"></button>
+      <h2 class="cards__card__title"></h2>
+      <p class="cards__card__subtitle"></p>
+      <div class="cards__card__tags">
+        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
+        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
+        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
+        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
+      </div>
+      <div class="cards__card__description-container">
+        <p class="cards__card__description"></p>
+      </div>
+    </li>
+  </template>
+
+  <script type="module" src="./scripts/index.js"></script>
 </body>
 
 </html>
