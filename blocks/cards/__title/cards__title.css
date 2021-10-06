@@ -1,8 +1,12 @@
 .cards__title{
+    font-family: "Mulish", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 44px;
+    line-height: 56px;
     text-align: center;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.2px;
+    color: #373F41;
+    max-width: 730px;
+    margin: 0 auto 72px;
 }

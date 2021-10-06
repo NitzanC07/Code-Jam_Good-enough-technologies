@@ -1,0 +1,7 @@
+.cards__form{
+    width: 100%;
+    margin: 0 auto 69px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

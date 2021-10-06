@@ -1,0 +1,18 @@
+.cards__form__dropdown-list{
+    width: 290px;
+    height: 42px;
+    margin: 0;
+    padding: 11px 16px;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #757575;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+/* .cards__form__dropdown-list:last-of-type{
+    margin-right: 32px;
+} */
