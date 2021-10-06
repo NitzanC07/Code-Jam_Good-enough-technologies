@@ -1,0 +1,5 @@
+.chat-popup__messages {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}

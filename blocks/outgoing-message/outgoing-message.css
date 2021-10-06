@@ -1,0 +1,7 @@
+.outgoing-message {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-areas: "container img" "time .";
+  grid-template-columns: minmax(min-content, max-content) min-content;
+  align-self: flex-end;
+}

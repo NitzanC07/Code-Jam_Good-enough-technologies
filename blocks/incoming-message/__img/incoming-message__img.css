@@ -1,0 +1,6 @@
+.incoming-message__img {
+  margin-right: 10px;
+  width: 26px;
+  height: 26px;
+  grid-area: img;
+}

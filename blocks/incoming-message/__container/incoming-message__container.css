@@ -1,0 +1,7 @@
+.incoming-message__container {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 7px;
+  background-color: #E0E0E0;
+  grid-area: container;
+}

@@ -1,0 +1,12 @@
+.chat-popup__message-input {
+  padding-left: 16px;
+  font-family: "Mulish Regular", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  width: 100%;
+  height: 52px;
+  background-color: #e4e4e4;
+  border: none;
+  border-radius: 8px;
+}

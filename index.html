@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="./pages/index.css">
   <link rel="shortcut icon" type="image/jpg" href="http://cdn.onlinewebfonts.com/svg/img_29736.png">
   <title>STUDYBUDDY</title>
 </head>
@@ -123,21 +122,24 @@
       <p class="chat-popup__time">TODAY AT 11:35</p>
       <div class="chat-popup__messages">
         <div class="incoming-message">
-          <img class="incoming-message__img">
+          <img class="incoming-message__img" src="./images/mila.png">
           <div class="incoming-message__container">
             <p class="incoming-message__text">Hello! How are you?</p>
           </div>
           <p class="incoming-message__time">3 minutes ago</p>
         </div>
         <div class="outgoing-message">
-          <img class="outgoing-message__img">
+          <img class="outgoing-message__img" src="./images/user.webp">
           <div class="outgoing-message__container">
             <p class="outgoing-message__text">Hello nice to meet you, I'm fine!<br>Tell me about yourself.</p>
           </div>
           <p class="outgoing-message__time">3 minutes ago</p>
         </div>
       </div>
-      <input class="chat-popup__message-input">
+      <div class="chat-popup__input-container">
+        <button class="chat-popup__send-btn"><img class="chat-popup__send-icon" src="./images/message-send.png"></button>
+        <input class="chat-popup__message-input" placeholder="Type a message...">
+      </div>
     </div>
   </div>
 

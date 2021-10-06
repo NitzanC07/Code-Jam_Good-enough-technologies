@@ -1,0 +1,8 @@
+.outgoing-message__img {
+  margin-left: 10px;
+  width: 26px;
+  height: 26px;
+  object-fit: cover;
+  border-radius: 50%;
+  justify-self: end;
+}
