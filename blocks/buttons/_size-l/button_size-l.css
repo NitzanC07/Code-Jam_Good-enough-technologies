@@ -1,9 +1,11 @@
-.cards__sort-button{
+.button_size-l{
     width: 350px;
     height: 42px;
-    background-color: #4d4d4e;
+    border: 0;
+    border-radius: 6px;
+    background-color: #249F8D;
     color: #fff;
-    margin: 0 auto;
+    margin: 0 auto 140px;
     font-family: "Mulish", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: bold;

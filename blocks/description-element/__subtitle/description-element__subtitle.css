@@ -1,7 +1,8 @@
 .description-element__subtitle {
   margin: 0;
+  max-width: 350px;
   font-family: "Mulish Regular", Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
   letter-spacing: 0.2px;
   text-align: center;

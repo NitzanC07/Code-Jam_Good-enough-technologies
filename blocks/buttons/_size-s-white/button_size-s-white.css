@@ -1,8 +1,10 @@
-.cards__form__submit-button{
+.button_size-s-white{
     width: 160px;
     height: 42px;
-    background-color: #4d4d4e;
-    color: #FFFFFF;
+    background-color: #fff;
+    border: solid 2px #249F8D;
+    border-radius: 4px;
+    color: #249F8D;
     font-family: "Mulish", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: bold;

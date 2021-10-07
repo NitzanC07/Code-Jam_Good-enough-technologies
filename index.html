@@ -22,7 +22,7 @@
         <a class="header__link">Item five</a>
       </div>
       <div class="header__buttons">
-        <button class="header__settings"><img class="header__settings-icon" src="./images/gear.png"></button>
+        <button class="header__settings"><img class="header__settings-icon" src="./images/message-black.svg"></button>
         <button class="header__profile"><img class="header__profile-icon" src="./images/user.webp"></button>
         <div class="profile-popup">
           <div class="profile-popup__info-container">
@@ -45,32 +45,51 @@
   <main class="content">
     <div class="cover">
       <h2 class="cover__title">Find motivated friends<br>and learn new skills together</h2>
-      <p class="cover__subtitle">Find your companion for productive learning. Share plants, experience, discuss, motivate and build new helpful connections with SUTDY BUDDY</p>
+      <p class="cover__subtitle">Find your companion for productive learning.<br>Share plants, experience, discuss, motivate and build new helpful connections with SUTDY BUDDY</p>
       <div class="cover__button-row">
-        <button class="cover__button-find">Find a buddy</button>
-        <button class="cover__button-learn">Learn more</button>
+        <button class="cover__button-find button_size-s">Find a buddy</button>
+        <button class="cover__button-learn button_size-s-white">Learn more</button>
       </div>
+      <img class="cover__left-man" src="./images/left_man.png" alt="cover picture">
+      <img class="cover__right-man" src="./images/right_man.png" alt="cover picture">
     </div>
+
+    <section class="description">
+      <h2 class="description__title">How it works?</h2>
+      <div class="description__row">
+        <div class="description-element">
+          <img class="description-element__img" src="./images/phone.svg">
+          <p class="description-element__subtitle">Select a person with similar interests and plans</p>
+        </div>
+        <div class="description-element">
+          <img class="description-element__img" src="./images/shaking-hands.svg">
+          <p class="description-element__subtitle">Share your experience and motivate each other to learn</p>
+        </div>
+        <div class="description-element">
+          <img class="description-element__img" src="./images/star.svg">
+          <p class="description-element__subtitle">Grow skills and built your career with support and good connections</p>
+        </div>
+      </div>
+    </section>
 
     <section class="cards">
       <h2 class="cards__title">Find people from your field of study</h2>
       <form class="cards__form">
-        <select class="cards__form__dropdown-list" name="dropdown-list">
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
+        <select class="cards__form__dropdown-list" name="field-of-study">
+          <option class="cards__form__dropdown-item" value="field-of-study">Field of study</option>
+          <option class="cards__form__dropdown-item" value="field-of-study">Field of study</option>
+          <option class="cards__form__dropdown-item" value="field-of-study">Field of study</option>
         </select>
-        <select class="cards__form__dropdown-list" name="dropdown-list">
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
+        <select class="cards__form__dropdown-list" name="cities">
+          <option class="cards__form__dropdown-item" value="city">City</option>
+          <option class="cards__form__dropdown-item" value="city">City</option>
+          <option class="cards__form__dropdown-item" value="city">City</option>
         </select>
-        <select class="cards__form__dropdown-list" name="dropdown-list">
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
+        <select class="cards__form__dropdown-list" name="gender">
+          <option class="cards__form__dropdown-item" value="male">Male</option>
+          <option class="cards__form__dropdown-item" value="female">Female</option>
         </select>
-        <button class="cards__form__submit-button">Search</button>
+        <button class="button_size-s">Search</button>
       </form>
       <div class="cards__program">
         <h3 class="cards__program-title">Name of program</h3>
@@ -79,70 +98,71 @@
         </ul>
         <a class="cards__see-all" href=#>See all</a>
       </div>
-      <button class="cards__sort-button">Sort result</button>
+      <button class="button_size-l">Sort result</button>
     </section>
 
-    <section class="description">
-      <h2 class="description__title">How does it work?</h2>
-      <div class="description__row">
-        <div class="description-element">
-          <img class="description-element__img" src="./images/placeholder circle.jpg">
-          <h3 class="description-element__title">Select an interesting field of learning</h3>
-          <p class="description-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
-        </div>
-        <div class="description-element">
-          <img class="description-element__img" src="./images/placeholder circle.jpg">
-          <h3 class="description-element__title">Select people with similar level</h3>
-          <p class="description-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
-        </div>
-        <div class="description-element">
-          <img class="description-element__img" src="./images/placeholder circle.jpg">
-          <h3 class="description-element__title">Communicate in chat</h3>
-          <p class="description-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
-        </div>
-      </div>
     </section>
-
-<<<<<<< HEAD
-=======
-    </section>
->>>>>>> 4a6eae356fe547aa049885dca34d4c9e5201960a
     <section class="stories">
       <h2 class="stories__title">Stories from our members</h2>
       <div class="stories__row">
         <div class="stories-element">
-          <img class="stories-element__img" src="./images/placeholder circle.jpg">
-          <h3 class="stories-element__title">Name Surename</h3>
+          <img class="stories-element__img" src="./images/paul.png">
+          <h3 class="stories-element__title">Paul Castanie</h3>
           <p class="stories-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
             iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
           <p class="stories-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
             iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. </p>
         </div>
         <div class="stories-element">
-          <img class="stories-element__img" src="./images/placeholder circle.jpg">
-          <h3 class="stories-element__title">Name Surename</h3>
+          <img class="stories-element__img" src="./images/naomi.png">
+          <h3 class="stories-element__title">Naomi Brit</h3>
           <p class="stories-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
             iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
           <p class="stories-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
             iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. </p>
         </div>
         <div class="stories-element">
-          <img class="stories-element__img" src="./images/placeholder circle.jpg">
-          <h3 class="stories-element__title">Name Surename</h3>
+          <img class="stories-element__img" src="./images/stephanie.png">
+          <h3 class="stories-element__title">Stephanie Riverali</h3>
           <p class="stories-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
             iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
           <p class="stories-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
             iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. </p>
         </div>
       </div>
+      <button class="button_size-l">Find your StudyBuddy</button>
     </section>
   </main>
-<<<<<<< HEAD
-=======
+
+  <footer class="footer">
+    <h2 class="footer__title">STUDY BUDDY</h2>
+    <ul class="footer__links">
+      <li class="footer__item-link"><a class="footer__link" href="#">Home</a></li>
+      <li class="footer__item-link"><a class="footer__link" href="#">How it works</a></li>
+      <li class="footer__item-link"><a class="footer__link" href="#">People</a></li>
+      <li class="footer__item-link"><a class="footer__link" href="#">Reviews</a></li>
+      <li class="footer__item-link"><a class="footer__link" href="#">Blog</a></li>
+    </ul>
+    <ul class="footer__contact-list">
+      <li class="footer__contact-item">Email: contact@studybuddy.com</li>
+      <li class="footer__contact-item">Phone: (684) 555-0102</li>
+      <li class="footer__contact-item">Adress: W. Gray St. Utica, 57867</li>
+    </ul>
+    <div class="footer__social">
+      <p class="footer__social-text">Social Media</p>
+      <div class="footer__social-logos">
+        <img class="footer__social-logo" src="./images/Group 29.svg" alt="Facebook">
+        <img class="footer__social-logo" src="./images/twitter black.1.svg" alt="Twitter">
+        <img class="footer__social-logo" src="./images/linkedin black.1.svg" alt="Linkdein">
+        <img class="footer__social-logo" src="./images/youtube color.1.svg" alt="YouTube">
+        <img class="footer__social-logo" src="./images/instagram black.1.svg" alt="Instegram">
+        <img class="footer__social-logo" src="./images/googleplus black.1.svg" alt="Google plus">
+      </div>
+    </div>
+  </footer>
 
   <button class="chat-button">Messages<img class="chat-button__icon" src="./images/chevron-up.png"></button>
 
->>>>>>> 4a6eae356fe547aa049885dca34d4c9e5201960a
 
   <div class="chat-popup">
     <div class="chat-popup__info-area">

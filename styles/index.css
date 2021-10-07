@@ -1,6 +1,10 @@
 @import url(../vendor/normalize.css);
 @import url(../fonts/fonts.css);
 @import url(../blocks/page/page.css);
+@import url(../blocks/buttons/_size-l/button_size-l.css);
+@import url(../blocks/buttons/_size-s/button_size-s.css);
+@import url(../blocks/buttons/_size-s-white/button_size-s-white.css);
+
 @import url(../blocks/content/content.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__container/header__container.css);
@@ -17,8 +21,11 @@
 @import url(../blocks/cover/cover.css);
 @import url(../blocks/cover/__title/cover__title.css);
 @import url(../blocks/cover/__subtitle/cover__subtitle.css);
+@import url(../blocks/cover/__button-row/cover__button-row.css);
 @import url(../blocks/cover/__button-find/cover__button-find.css);
 @import url(../blocks/cover/__button-learn/cover__button-learn.css);
+@import url(../blocks/cover/__left-man/cover__left-man.css);
+@import url(../blocks/cover/__right-man/cover__right-man.css);
 
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/cards/__container/cards__container.css);
@@ -26,7 +33,6 @@
 @import url(../blocks/cards/__form/cards__form.css);
 @import url(../blocks/cards/__form/__dropdown-list/cards__form__dropdown-list.css);
 @import url(../blocks/cards/__form/__dropdown-item/cards__form__dropdown-item.css);
-@import url(../blocks/cards/__form/__submit-button/cards__form__submit-button.css);
 @import url(../blocks/cards/__program/cards__program.css);
 @import url(../blocks/cards/__program-title/cards__program-title.css);
 @import url(../blocks/cards/__card/cards__card.css);
@@ -39,7 +45,6 @@
 @import url(../blocks/cards/__card/__description-container/cards__card__description-container.css);
 @import url(../blocks/cards/__card/__description/cards__card__description.css);
 @import url(../blocks/cards/__card/__see-all/cards__see-all.css);
-@import url(../blocks/cards/__sort-button/cards__sort-button.css);
 
 @import url(../blocks/description/description.css);
 @import url(../blocks/description/__title/description__title.css);
@@ -56,6 +61,19 @@
 @import url(../blocks/stories-element/__title/stories-element__title.css);
 @import url(../blocks/stories-element/__subtitle/stories-element__subtitle.css);
 @import url(../blocks/stories-element/__img/stories-element__img.css);
+@import url(../blocks/stories/__find-button/stories__find-button.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__title/footer__title.css);
+@import url(../blocks/footer/__links/footer__links.css);
+@import url(../blocks/footer/__item-link/footer__item-link.css);
+@import url(../blocks/footer/__link/footer__link.css);
+@import url(../blocks/footer/__contact-list/footer__contact-list.css);
+@import url(../blocks/footer/__contact-item/footer__contact-item.css);
+@import url(../blocks/footer/__social/footer__social.css);
+@import url(../blocks/footer/__social-text/footer__social-text.css);
+@import url(../blocks/footer/__social-logos/footer__social-logos.css);
+@import url(../blocks/footer/__social-logo/footer__social-logo.css);
 
 @import url(../blocks/profile-popup/profile-popup.css);
 @import url(../blocks/profile-popup/__info-container/profile-popup__info-container.css);

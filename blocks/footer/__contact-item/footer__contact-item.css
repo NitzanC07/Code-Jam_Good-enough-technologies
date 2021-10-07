@@ -1,0 +1,14 @@
+.footer__contact-item{
+    margin-bottom: 18px;
+    font-family: "Mulish", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #0E1C26;
+}
+
+.footer__contact-item:last-of-type{
+    margin-bottom: 0;
+}

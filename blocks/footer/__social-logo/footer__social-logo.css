@@ -1,0 +1,7 @@
+.footer__social-logo{
+    margin-right: 26px;
+}
+
+.footer__social-logo:last-of-type{
+    margin-right: 0;
+}

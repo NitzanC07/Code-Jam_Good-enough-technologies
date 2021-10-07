@@ -2,9 +2,10 @@
   margin: 0 0 56px;
   width: calc(730/1440 * 100%);
   font-family: "Mulish Regular", Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.3px;
   text-align: center;
   color: #737B7D;
+  z-index: 1;
 }
