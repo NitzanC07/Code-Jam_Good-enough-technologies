@@ -1,37 +1,44 @@
-class Card {
-    constructor(data, cardTemplate) {
-        this._data = data;
-        this._cardTemplate = cardTemplate;
+export class Card {
+  constructor(cardData, { handleContactOpen }) {
+    this._cardData = cardData;
+    this._handleContactOpen = handleContactOpen;
+
+  }
+
+  _setEventListeners() {
+    this._contactBtn.addEventListener('click', this._handleContactOpen);
+  }
+
+  _getTemplate() {
+    return document.querySelector('#card-template')
+      .content
+      .querySelector('.cards__card')
+      .cloneNode(true);
+  }
+
+  _setCardElements() {
+    this._card = this._getTemplate();
+    this._cardImg = this._card.querySelector('.cards__card__image');
+    this._cardTitle = this._card.querySelector('.cards__card__title');
+    this._cardSubtitle = this._card.querySelector('.cards__card__subtitle');
+    this._cardDescription = this._card.querySelector('.cards__card__description');
+    this._tagArray = Array.from(this._card.querySelectorAll('.cards__card__content-tag'));
+    this._contactBtn = this._card.querySelector('.cards__card__contact-button');
+  }
+
+  createCard() {
+    this._setCardElements();
+    this._cardImg.src = this._cardData.imageSrc;
+    this._cardImg.alt = this._cardData.imageAlt;
+    this._cardTitle.textContent = this._cardData.title;
+    this._cardSubtitle.textContent = this._cardData.subtitle;
+    this._cardDescription.textContent = this._cardData.description;
+
+    for (let i = 0; i < this._tagArray.length; i++) {
+      this._tagArray[i].textContent = this._cardData.contentTag[i];
     }
 
-    _renderCard() {
-        // button for opening chat popup.
-    }
-
-    createCard() {
-        const newCard = this._cardTemplate.querySelector('.cards__card').cloneNode(true);
-        const img = newCard.querySelector('.cards__card__image');
-        img.setAttribute('src', this._data.imageSrc);
-        img.setAttribute('alt', this._data.imageAlt);
-      
-        const cardTitle = newCard.querySelector('.cards__card__title');
-        cardTitle.textContent = this._data.title;
-
-        const cardSubtitle = newCard.querySelector('.cards__card__subtitle');
-        cardSubtitle.textContent = this._data.subtitle;
-
-        const cardTag = Array.from(newCard.querySelectorAll('.cards__card__content-tag'));
-        for (let i = 0; i < cardTag.length; i++) {
-            cardTag[i].textContent = this._data.contentTag[i];
-        }
-        
-        const cardDescription = newCard.querySelector('.cards__card__description');
-        cardDescription.textContent = this._data.description;
-
-        this._newCard = newCard;
-        this._renderCard();
-        return this._newCard;
-    };
+    this._setEventListeners();
+    return this._card;
+  };
 }
-
-export {Card}

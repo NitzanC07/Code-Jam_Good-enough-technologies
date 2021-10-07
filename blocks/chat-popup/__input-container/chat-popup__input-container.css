@@ -1,3 +1,6 @@
 .chat-popup__input-container {
+  margin-right: 20px;
+  border-radius: 8px;
+  overflow: hidden;
   position: relative;
 }

@@ -1,6 +1,9 @@
 .profile-popup {
   background-color: #E0E0E0;
   position: absolute;
-  top: 55px;
-  right: 25px;
+  top: 40px;
+  right: 95px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s ease .3s, opacity .3s ease;
 }

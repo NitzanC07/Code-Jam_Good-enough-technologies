@@ -103,6 +103,10 @@
       </div>
     </section>
 
+<<<<<<< HEAD
+=======
+    </section>
+>>>>>>> 4a6eae356fe547aa049885dca34d4c9e5201960a
     <section class="stories">
       <h2 class="stories__title">Stories from our members</h2>
       <div class="stories__row">
@@ -133,6 +137,12 @@
       </div>
     </section>
   </main>
+<<<<<<< HEAD
+=======
+
+  <button class="chat-button">Messages<img class="chat-button__icon" src="./images/chevron-up.png"></button>
+
+>>>>>>> 4a6eae356fe547aa049885dca34d4c9e5201960a
 
   <div class="chat-popup">
     <div class="chat-popup__info-area">
@@ -144,6 +154,8 @@
     <div class="chat-popup__message-area">
       <p class="chat-popup__time">TODAY AT 11:35</p>
       <div class="chat-popup__messages">
+
+        <template id="incoming-message-template">
         <div class="incoming-message">
           <img class="incoming-message__img" src="./images/mila.png">
           <div class="incoming-message__container">
@@ -151,18 +163,23 @@
           </div>
           <p class="incoming-message__time">3 minutes ago</p>
         </div>
+        </template>
+
+        <template id="outgoing-message-template">
         <div class="outgoing-message">
-          <img class="outgoing-message__img" src="./images/user.webp">
+          <img class="outgoing-message__img" src="">
           <div class="outgoing-message__container">
-            <p class="outgoing-message__text">Hello nice to meet you, I'm fine!<br>Tell me about yourself.</p>
+            <p class="outgoing-message__text"></p>
           </div>
-          <p class="outgoing-message__time">3 minutes ago</p>
+          <p class="outgoing-message__time"></p>
         </div>
+        </template>
+
       </div>
-      <div class="chat-popup__input-container">
-        <button class="chat-popup__send-btn"><img class="chat-popup__send-icon" src="./images/message-send.png"></button>
-        <input class="chat-popup__message-input" placeholder="Type a message...">
-      </div>
+      <form class="chat-popup__input-container" method="POST" name="message-form">
+        <button type="submit" class="chat-popup__send-btn"><img class="chat-popup__send-icon" src="./images/message-send.png"></button>
+        <input class="chat-popup__message-input" placeholder="Type a message..." minlength="1" required>
+      </form>
     </div>
   </div>
 
