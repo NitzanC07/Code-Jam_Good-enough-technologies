@@ -9,7 +9,7 @@ export const initialCards = [
     description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
   },
   {
-    imageSrc: "./images/card-robert.png",
+    imageSrc: "./images/robert.png",
     imageAlt: "Robert Fox",
     title: "Robert Fox",
     city: "New York",
