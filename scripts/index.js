@@ -52,6 +52,7 @@ initialCards.forEach((cardData) => {
   cardsContainer.append(new Card(cardData, {
     handleContactOpen: () => {
       chatWindow.classList.add('opened');
+      chatBtnIcon.classList.add('rotate');
     }
   }).createCard());
 });
