@@ -1,0 +1,14 @@
+.card__contact-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #c4c4c4;
+  background-image: url(../../../../images/eva_message-circle-outline.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  position: absolute;
+  top: 234px;
+  right: 30px;
+}
