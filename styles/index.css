@@ -23,7 +23,6 @@
 @import url(../blocks/cover/__button-row/cover__button-row.css);
 @import url(../blocks/cover/__button-find/cover__button-find.css);
 @import url(../blocks/cover/__button-learn/cover__button-learn.css);
-<<<<<<< HEAD
 @import url(../blocks/cover/__left-man/cover__left-man.css);
 @import url(../blocks/cover/__right-man/cover__right-man.css);
 
@@ -46,8 +45,6 @@
 @import url(../blocks/cards/__card/__description/cards__card__description.css);
 @import url(../blocks/cards/__card/__see-all/cards__see-all.css);
 
-=======
->>>>>>> 3639db4a285894d0a78c7b8c708f3006c1adc56a
 @import url(../blocks/description/description.css);
 @import url(../blocks/description/__title/description__title.css);
 @import url(../blocks/description/__row/description__row.css);
@@ -62,7 +59,6 @@
 @import url(../blocks/stories-element/__title/stories-element__title.css);
 @import url(../blocks/stories-element/__subtitle/stories-element__subtitle.css);
 @import url(../blocks/stories-element/__img/stories-element__img.css);
-<<<<<<< HEAD
 @import url(../blocks/stories/__find-button/stories__find-button.css);
 
 @import url(../blocks/footer/footer.css);
@@ -77,8 +73,6 @@
 @import url(../blocks/footer/__social-logos/footer__social-logos.css);
 @import url(../blocks/footer/__social-logo/footer__social-logo.css);
 
-=======
->>>>>>> 3639db4a285894d0a78c7b8c708f3006c1adc56a
 @import url(../blocks/profile-popup/profile-popup.css);
 @import url(../blocks/profile-popup/__info-container/profile-popup__info-container.css);
 @import url(../blocks/profile-popup/__links/profile-popup__links.css);

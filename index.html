@@ -74,7 +74,7 @@
 
     <section class="cards">
       <h2 class="cards__title">Find people from your field of study</h2>
-      <form class="cards__form">
+      <!-- <form class="cards__form">
         <select class="cards__form__dropdown-list" name="field-of-study">
           <option class="cards__form__dropdown-item" value="field-of-study">Field of study</option>
           <option class="cards__form__dropdown-item" value="field-of-study">Field of study</option>
@@ -89,16 +89,54 @@
           <option class="cards__form__dropdown-item" value="male">Male</option>
           <option class="cards__form__dropdown-item" value="female">Female</option>
         </select>
-        <button class="button_size-s">Search</button>
+        <button class="button_size-s">Search</button> 
+      </form> -->
+      <form class="sorting-form">
+        <select class="sorting-form__dropdown-list" name="dropdown-list">
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+        </select>
+        <select class="sorting-form__dropdown-list" name="dropdown-list">
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+        </select>
+        <select class="sorting-form__dropdown-list" name="dropdown-list">
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+        </select>
+        <button class="sorting-form__submit-button">Search</button>
       </form>
       <div class="cards__program">
-        <h3 class="cards__program-title">Name of program</h3>
-        <ul class="cards__container">
-  
-        </ul>
-        <a class="cards__see-all" href=#>See all</a>
+        <div class="cards__container">
+        </div>
       </div>
       <button class="button_size-l">Sort result</button>
+    </section>
+
+    </section>
+
+    <section class="description">
+      <h2 class="description__title">How does it work?</h2>
+      <div class="description__row">
+        <div class="description-element">
+          <img class="description-element__img" src="./images/placeholder circle.jpg">
+          <h3 class="description-element__title">Select an interesting field of learning</h3>
+          <p class="description-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
+        </div>
+        <div class="description-element">
+          <img class="description-element__img" src="./images/placeholder circle.jpg">
+          <h3 class="description-element__title">Select people with similar level</h3>
+          <p class="description-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
+        </div>
+        <div class="description-element">
+          <img class="description-element__img" src="./images/placeholder circle.jpg">
+          <h3 class="description-element__title">Communicate in chat</h3>
+          <p class="description-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
+        </div>
+      </div>
     </section>
 
     </section>
@@ -204,21 +242,21 @@
   </div>
 
   <template id="card-template">
-    <li class="cards__card">
-      <img class="cards__card__image" src="" alt="">
-      <button class="cards__card__contact-button"></button>
-      <h2 class="cards__card__title"></h2>
-      <p class="cards__card__subtitle"></p>
-      <div class="cards__card__tags">
-        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
-        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
-        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
-        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
+    <div class="card">
+      <img class="card__image" src="" alt="">
+      <button class="card__contact-button"></button>
+      <h2 class="card__title"></h2>
+      <p class="card__subtitle"></p>
+      <div class="card__tags">
+        <div class="card__tag"><p class="card__content-tag"></p></div>
+        <div class="card__tag"><p class="card__content-tag"></p></div>
+        <div class="card__tag"><p class="card__content-tag"></p></div>
+        <div class="card__tag"><p class="card__content-tag"></p></div>
       </div>
-      <div class="cards__card__description-container">
-        <p class="cards__card__description"></p>
+      <div class="card__description-container">
+        <p class="card__description"></p>
       </div>
-    </li>
+    </div>
   </template>
 
   <script type="module" src="./scripts/index.js"></script>
