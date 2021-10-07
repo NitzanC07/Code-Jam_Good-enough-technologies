@@ -15,11 +15,11 @@
     <div class="header__container">
       <h1 class="header__title">STUDY BUDDY</h1>
       <div class="header__links">
-        <a class="header__link">Item one</a>
-        <a class="header__link">Item two</a>
-        <a class="header__link">Item three</a>
-        <a class="header__link">Item four</a>
-        <a class="header__link">Item five</a>
+        <a class="header__link">Home</a>
+        <a class="header__link">How it works</a>
+        <a class="header__link">People</a>
+        <a class="header__link">Reviews</a>
+        <a class="header__link">Blog</a>
       </div>
       <div class="header__buttons">
         <button class="header__settings"><img class="header__settings-icon" src="./images/message-black.svg"></button>
@@ -45,10 +45,10 @@
   <main class="content">
     <div class="cover">
       <h2 class="cover__title">Find motivated friends<br>and learn new skills together</h2>
-      <p class="cover__subtitle">Find your companion for productive learning.<br>Share plants, experience, discuss, motivate and build new helpful connections with SUTDY BUDDY</p>
+      <p class="cover__subtitle">Find your companion for productive learning.<br>Share plants, experience, discuss, motivate and build new helpful connections<br>with SUTDY BUDDY</p>
       <div class="cover__button-row">
-        <button class="cover__button-find button_size-s">Find a buddy</button>
-        <button class="cover__button-learn button_size-s-white">Learn more</button>
+        <button class="cover__button-find">Find a buddy</button>
+        <button class="cover__button-learn">Learn more</button>
       </div>
       <img class="cover__left-man" src="./images/left_man.png" alt="cover picture">
       <img class="cover__right-man" src="./images/right_man.png" alt="cover picture">
@@ -74,23 +74,6 @@
 
     <section class="cards">
       <h2 class="cards__title">Find people from your field of study</h2>
-      <!-- <form class="cards__form">
-        <select class="cards__form__dropdown-list" name="field-of-study">
-          <option class="cards__form__dropdown-item" value="field-of-study">Field of study</option>
-          <option class="cards__form__dropdown-item" value="field-of-study">Field of study</option>
-          <option class="cards__form__dropdown-item" value="field-of-study">Field of study</option>
-        </select>
-        <select class="cards__form__dropdown-list" name="cities">
-          <option class="cards__form__dropdown-item" value="city">City</option>
-          <option class="cards__form__dropdown-item" value="city">City</option>
-          <option class="cards__form__dropdown-item" value="city">City</option>
-        </select>
-        <select class="cards__form__dropdown-list" name="gender">
-          <option class="cards__form__dropdown-item" value="male">Male</option>
-          <option class="cards__form__dropdown-item" value="female">Female</option>
-        </select>
-        <button class="button_size-s">Search</button> 
-      </form> -->
       <form class="sorting-form">
         <select class="sorting-form__dropdown-list" name="dropdown-list">
           <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
@@ -111,30 +94,6 @@
       </form>
       <div class="cards__program">
         <div class="cards__container">
-        </div>
-      </div>
-      <button class="button_size-l">Sort result</button>
-    </section>
-
-    </section>
-
-    <section class="description">
-      <h2 class="description__title">How does it work?</h2>
-      <div class="description__row">
-        <div class="description-element">
-          <img class="description-element__img" src="./images/placeholder circle.jpg">
-          <h3 class="description-element__title">Select an interesting field of learning</h3>
-          <p class="description-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
-        </div>
-        <div class="description-element">
-          <img class="description-element__img" src="./images/placeholder circle.jpg">
-          <h3 class="description-element__title">Select people with similar level</h3>
-          <p class="description-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
-        </div>
-        <div class="description-element">
-          <img class="description-element__img" src="./images/placeholder circle.jpg">
-          <h3 class="description-element__title">Communicate in chat</h3>
-          <p class="description-element__subtitle">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.</p>
         </div>
       </div>
     </section>
@@ -168,7 +127,7 @@
             iuvaret vulputate sed. At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed. </p>
         </div>
       </div>
-      <button class="button_size-l">Find your StudyBuddy</button>
+      <button class="stories__find-button">Find your StudyBuddy</button>
     </section>
   </main>
 
@@ -199,15 +158,19 @@
     </div>
   </footer>
 
-  <button class="chat-button">Messages<img class="chat-button__icon" src="./images/chevron-up.png"></button>
+  <button class="chat-button">Messages<img class="chat-button__icon" src="./images/chevron-up.svg"></button>
 
 
   <div class="chat-popup">
     <div class="chat-popup__info-area">
+      <img class="caht-popup__left-arrow" src="./images/chevron-up.svg" alt="left-arrow">
       <img class="chat-popup__img" src="./images/mila.png">
-      <h3 class="chat-popup__name">Mila Gramm</h3>
-      <p class="chat-popup__description">Student at Yandex Practicum</p>
-      <a class="chat-popup__view-profile">View Profile</a>
+      <div class="chat-popup__profile">
+        <h3 class="chat-popup__name">Mila Gramm</h3>
+        <p class="chat-popup__description">Student at Yandex Practicum</p>
+        <a class="chat-popup__view-profile">View Profile</a>
+      </div>
+      <img class="chat-popup__camera-icon" src="./images/camera.svg" alt="Camera icon">
     </div>
     <div class="chat-popup__message-area">
       <p class="chat-popup__time">TODAY AT 11:35</p>

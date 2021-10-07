@@ -1,8 +1,10 @@
 .chat-popup__time {
-  margin: 0 0 16px;
+  margin: 0 0 29px;
   font-family: "Roboto Regular", Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.03em;
   text-align: center;
+  text-transform: uppercase;
+  color: #5e7281;
 }

@@ -8,12 +8,6 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  color: #757575;
-  /* display: flex;
-    justify-content: space-between; */
+  color: #757575;   
+  border-radius: 4px;
 }
-
-
-/* .sorting-form__dropdown-list:last-of-type{
-    margin-right: 32px;
-} */

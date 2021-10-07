@@ -1,5 +1,5 @@
 .card__tag {
-  width: 64px;
+  min-width: 64px;
   height: 32px;
   font-family: "Mulish", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -8,7 +8,7 @@
   line-height: 20px;
   letter-spacing: 0.2px;
   color: #000;
-  background-color: #bdbdbd;
+  background-color: #d3e9f8;
   margin: 0 6px 0 0;
   border-radius: 17px;
   display: flex;

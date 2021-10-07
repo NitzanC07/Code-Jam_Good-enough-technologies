@@ -3,9 +3,9 @@
   width: calc(730/1440 * 100%);
   font-family: "Mulish Regular", Arial, Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 24px;
   letter-spacing: 0.3px;
   text-align: center;
-  color: #737B7D;
+  color: #5e7281;
   z-index: 1;
 }
