@@ -2,7 +2,9 @@ import { Card } from "./Card.js"
 import OutgoingMessage from "./OutgoingMessage.js";
 import Section from "./Section.js";
 import { initialCards } from "./initialCards.js";
+import Chat from "./Chat.js";
 
+const cardsContainer = document.querySelector('.cards__container');
 const profilePopup = document.querySelector('.profile-popup');
 const profileSettingsBtn = document.querySelector('.header__settings');
 const chatBtn = document.querySelector('.chat-button');
@@ -15,11 +17,23 @@ const chatTime = document.querySelector('.chat-popup__time');
 const chatBtnIcon = document.querySelector('.chat-button__icon');
 const settingIcon = document.querySelector('.header__settings-icon');
 const currentTime = new Date();
+const pageBody = document.querySelector('.page');
 const popupWrapper = document.querySelector('.card-popup-wrapper');
 chatTime.textContent = `TODAY AT ${currentTime.getHours()}:${currentTime.getMinutes()}`
-
+const sortButton = document.querySelector('.sorting-form__submit-button');
+const studyDropdownValue = document.querySelector('#field-of-study');
+const dropDownForm = document.querySelector('.sorting-form');
 const createMessage = (content, image) => {
   return new OutgoingMessage({ content: content, userImage: image, time: currentTime }).createMessage();
+}
+
+const createSection = (container, parameter) => {
+  return new Section({
+    items: initialCards,
+    renderer: (cardData) => {
+      cardList.addItem(createCard(cardData));
+    }
+  }, container, { parameter: parameter });
 }
 
 const createCard = (cardData) => {
@@ -34,12 +48,15 @@ const toggleSettings = () => {
 
 }
 
-const closeChat = () => {
-  chatWindow.classList.remove('opened');
-  chatBtnIcon.classList.remove('rotate');
+const toggleChat = () => {
+  chatWindow.classList.toggle('opened');
+  chatBtnIcon.classList.toggle('rotate');
+
 }
 
-const openChat = () => {
+const openChat = (cardData) => {
+  const newChat = new Chat(cardData);
+  pageBody.append(newChat.createChat());
   chatWindow.classList.add('opened');
   chatBtnIcon.classList.add('rotate');
 }
@@ -58,14 +75,17 @@ const sendMessage = (evt) => {
 chatPopupContainer.addEventListener('submit', sendMessage);
 
 profileSettingsBtn.addEventListener('click', toggleSettings);
-chatBtn.addEventListener('click', openChat);
+chatBtn.addEventListener('click', toggleChat);
 
-const cardList = new Section({
-  items: initialCards,
-  renderer: (cardData) => {
-    const newCard = createCard(cardData);
-    cardList.addItem(newCard);
-  }
-}, ".cards__container");
-
+const cardList = createSection(".cards__container", '');
 cardList.renderer();
+
+sortButton.addEventListener('click', sortList);
+
+function sortList(evt) {
+  evt.preventDefault();
+  cardsContainer.innerHTML = "";
+  const sortedList = createSection(".cards__container", studyDropdownValue.value);
+  sortedList.renderer();
+  dropDownForm.reset();
+}
