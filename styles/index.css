@@ -105,4 +105,6 @@
 @import url(../blocks/card/__description-container/card__description-container.css);
 @import url(../blocks/card/__contact-button/card__contact-button.css);
 @import url(../blocks/card-popup-wrapper/card-popup-wrapper.css);
+@import url(../blocks/card-popup-wrapper/__container/card-popup-wrapper__container.css);
 @import url(../blocks/opened/opened.css);
+@import url(../blocks/extended/extended.css);

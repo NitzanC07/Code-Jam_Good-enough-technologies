@@ -19,6 +19,7 @@ const settingIcon = document.querySelector('.header__settings-icon');
 const currentTime = new Date();
 const pageBody = document.querySelector('.page');
 const popupWrapper = document.querySelector('.card-popup-wrapper');
+const popupWrapperContainer = document.querySelector('.card-popup-wrapper__container');
 chatTime.textContent = `TODAY AT ${currentTime.getHours()}:${currentTime.getMinutes()}`
 const sortButton = document.querySelector('.sorting-form__submit-button');
 const studyDropdownValue = document.querySelector('#field-of-study');
@@ -38,7 +39,13 @@ const createSection = (container, parameter) => {
 
 const createCard = (cardData) => {
   return new Card(cardData, {
-    handleContactOpen: openChat
+    handleContactOpen: openChat,
+    handleClick: (evt) => {
+      const cardPopup = evt.target.closest('.card').cloneNode(true);
+      popupWrapperContainer.append(cardPopup);
+      popupWrapperContainer.querySelector('.card__description-container').classList.add('extended');
+      popupWrapper.classList.add('opened');
+    }
   }).createCard();
 }
 

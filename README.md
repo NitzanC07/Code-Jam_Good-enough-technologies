@@ -12,7 +12,7 @@ We made a website called StudyBuddy that should help likeminded individuals who 
 
 ## Team
 * Katy Rysik (designer).
-* Simon Sherbinin (developer and team coordinator).
+* Simon Sherbinin (developer and team lead).
 * Nitzan Cohen (developer).
 
 ## Github Pages link:
