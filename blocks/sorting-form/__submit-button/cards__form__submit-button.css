@@ -1,9 +1,8 @@
-.cards__sort-button {
-  width: 350px;
+.sorting-form__submit-button {
+  width: 160px;
   height: 42px;
   background-color: #4d4d4e;
-  color: #fff;
-  margin: 0 auto;
+  color: #FFFFFF;
   font-family: "Mulish", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;

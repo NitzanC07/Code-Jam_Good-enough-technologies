@@ -12,18 +12,19 @@ export class Card {
   _getTemplate() {
     return document.querySelector('#card-template')
       .content
-      .querySelector('.cards__card')
+      .querySelector('.card')
       .cloneNode(true);
   }
 
   _setCardElements() {
     this._card = this._getTemplate();
-    this._cardImg = this._card.querySelector('.cards__card__image');
-    this._cardTitle = this._card.querySelector('.cards__card__title');
-    this._cardSubtitle = this._card.querySelector('.cards__card__subtitle');
-    this._cardDescription = this._card.querySelector('.cards__card__description');
-    this._tagArray = Array.from(this._card.querySelectorAll('.cards__card__content-tag'));
-    this._contactBtn = this._card.querySelector('.cards__card__contact-button');
+    this._cardImg = this._card.querySelector('.card__image');
+    this._cardTitle = this._card.querySelector('.card__title');
+    this._cardSubtitle = this._card.querySelector('.card__subtitle');
+    this._cardDescription = this._card.querySelector('.card__description');
+    this._cardTagsContaienr = this._card.querySelector('.card__tag');
+    this._tagArray = Array.from(this._card.querySelectorAll('.card__content-tag'));
+    this._contactBtn = this._card.querySelector('.card__contact-button');
   }
 
   createCard() {
@@ -35,6 +36,7 @@ export class Card {
     this._cardDescription.textContent = this._cardData.description;
 
     for (let i = 0; i < this._tagArray.length; i++) {
+
       this._tagArray[i].textContent = this._cardData.contentTag[i];
     }
 

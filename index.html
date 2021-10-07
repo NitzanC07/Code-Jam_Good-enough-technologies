@@ -54,32 +54,28 @@
 
     <section class="cards">
       <h2 class="cards__title">Find people from your field of study</h2>
-      <form class="cards__form">
-        <select class="cards__form__dropdown-list" name="dropdown-list">
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
+      <form class="sorting-form">
+        <select class="sorting-form__dropdown-list" name="dropdown-list">
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
         </select>
-        <select class="cards__form__dropdown-list" name="dropdown-list">
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
+        <select class="sorting-form__dropdown-list" name="dropdown-list">
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
         </select>
-        <select class="cards__form__dropdown-list" name="dropdown-list">
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
-          <option class="cards__form__dropdown-item" value="Dropdown item">Dropfown item</option>
+        <select class="sorting-form__dropdown-list" name="dropdown-list">
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
+          <option class="sorting-form__dropdown-item" value="Dropdown item">Dropfown item</option>
         </select>
-        <button class="cards__form__submit-button">Search</button>
+        <button class="sorting-form__submit-button">Search</button>
       </form>
       <div class="cards__program">
-        <h3 class="cards__program-title">Name of program</h3>
-        <ul class="cards__container">
-  
-        </ul>
-        <a class="cards__see-all" href=#>See all</a>
+        <div class="cards__container">
+        </div>
       </div>
-      <button class="cards__sort-button">Sort result</button>
     </section>
 
     <section class="description">
@@ -103,10 +99,7 @@
       </div>
     </section>
 
-<<<<<<< HEAD
-=======
     </section>
->>>>>>> 4a6eae356fe547aa049885dca34d4c9e5201960a
     <section class="stories">
       <h2 class="stories__title">Stories from our members</h2>
       <div class="stories__row">
@@ -137,12 +130,9 @@
       </div>
     </section>
   </main>
-<<<<<<< HEAD
-=======
 
   <button class="chat-button">Messages<img class="chat-button__icon" src="./images/chevron-up.png"></button>
 
->>>>>>> 4a6eae356fe547aa049885dca34d4c9e5201960a
 
   <div class="chat-popup">
     <div class="chat-popup__info-area">
@@ -184,21 +174,21 @@
   </div>
 
   <template id="card-template">
-    <li class="cards__card">
-      <img class="cards__card__image" src="" alt="">
-      <button class="cards__card__contact-button"></button>
-      <h2 class="cards__card__title"></h2>
-      <p class="cards__card__subtitle"></p>
-      <div class="cards__card__tags">
-        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
-        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
-        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
-        <div class="cards__card__tag"><p class="cards__card__content-tag"></p></div>
+    <div class="card">
+      <img class="card__image" src="" alt="">
+      <button class="card__contact-button"></button>
+      <h2 class="card__title"></h2>
+      <p class="card__subtitle"></p>
+      <div class="card__tags">
+        <div class="card__tag"><p class="card__content-tag"></p></div>
+        <div class="card__tag"><p class="card__content-tag"></p></div>
+        <div class="card__tag"><p class="card__content-tag"></p></div>
+        <div class="card__tag"><p class="card__content-tag"></p></div>
       </div>
-      <div class="cards__card__description-container">
-        <p class="cards__card__description"></p>
+      <div class="card__description-container">
+        <p class="card__description"></p>
       </div>
-    </li>
+    </div>
   </template>
 
   <script type="module" src="./scripts/index.js"></script>
