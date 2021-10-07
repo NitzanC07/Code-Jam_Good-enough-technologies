@@ -34,9 +34,9 @@ const toggleSettings = () => {
 
 }
 
-const toggleChat = () => {
-  chatWindow.classList.toggle('opened');
-  chatBtnIcon.classList.toggle('rotate');
+const closeChat = () => {
+  chatWindow.classList.remove('opened');
+  chatBtnIcon.classList.remove('rotate');
 }
 
 const openChat = () => {
@@ -58,7 +58,7 @@ const sendMessage = (evt) => {
 chatPopupContainer.addEventListener('submit', sendMessage);
 
 profileSettingsBtn.addEventListener('click', toggleSettings);
-chatBtn.addEventListener('click', toggleChat);
+chatBtn.addEventListener('click', openChat);
 
 const cardList = new Section({
   items: initialCards,
