@@ -4,7 +4,6 @@
 @import url(../blocks/buttons/_size-l/button_size-l.css);
 @import url(../blocks/buttons/_size-s/button_size-s.css);
 @import url(../blocks/buttons/_size-s-white/button_size-s-white.css);
-
 @import url(../blocks/content/content.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__container/header__container.css);
@@ -25,26 +24,11 @@
 @import url(../blocks/cover/__button-learn/cover__button-learn.css);
 @import url(../blocks/cover/__left-man/cover__left-man.css);
 @import url(../blocks/cover/__right-man/cover__right-man.css);
-
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/cards/__container/cards__container.css);
 @import url(../blocks/cards/__title/cards__title.css);
-@import url(../blocks/cards/__form/cards__form.css);
-@import url(../blocks/cards/__form/__dropdown-list/cards__form__dropdown-list.css);
-@import url(../blocks/cards/__form/__dropdown-item/cards__form__dropdown-item.css);
 @import url(../blocks/cards/__program/cards__program.css);
 @import url(../blocks/cards/__program-title/cards__program-title.css);
-@import url(../blocks/cards/__card/cards__card.css);
-@import url(../blocks/cards/__card/__image/cards__card__image.css);
-@import url(../blocks/cards/__card/__contact-button/cards__card__contact-button.css);
-@import url(../blocks/cards/__card/__title/cards__card__title.css);
-@import url(../blocks/cards/__card/__subtitle/cards__card__subtitle.css);
-@import url(../blocks/cards/__card/__tags/cards__card__tags.css);
-@import url(../blocks/cards/__card/__tag/cards__card__tag.css);
-@import url(../blocks/cards/__card/__description-container/cards__card__description-container.css);
-@import url(../blocks/cards/__card/__description/cards__card__description.css);
-@import url(../blocks/cards/__card/__see-all/cards__see-all.css);
-
 @import url(../blocks/description/description.css);
 @import url(../blocks/description/__title/description__title.css);
 @import url(../blocks/description/__row/description__row.css);
@@ -59,8 +43,6 @@
 @import url(../blocks/stories-element/__title/stories-element__title.css);
 @import url(../blocks/stories-element/__subtitle/stories-element__subtitle.css);
 @import url(../blocks/stories-element/__img/stories-element__img.css);
-@import url(../blocks/stories/__find-button/stories__find-button.css);
-
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__title/footer__title.css);
 @import url(../blocks/footer/__links/footer__links.css);
@@ -72,7 +54,6 @@
 @import url(../blocks/footer/__social-text/footer__social-text.css);
 @import url(../blocks/footer/__social-logos/footer__social-logos.css);
 @import url(../blocks/footer/__social-logo/footer__social-logo.css);
-
 @import url(../blocks/profile-popup/profile-popup.css);
 @import url(../blocks/profile-popup/__info-container/profile-popup__info-container.css);
 @import url(../blocks/profile-popup/__links/profile-popup__links.css);
@@ -103,13 +84,11 @@
 @import url(../blocks/outgoing-message/__img/outgoing-message__img.css);
 @import url(../blocks/outgoing-message/__text/outgoing-message__text.css);
 @import url(../blocks/outgoing-message/__time/outgoing-message__text.css);
-@import url(../blocks/opened/opened.css);
 @import url(../blocks/chat-button/chat-button.css);
 @import url(../blocks/chat-button/__icon/chat-button__icon.css);
 @import url(../blocks/rotate/rotate.css);
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/cards/__title/cards__title.css);
-@import url(../blocks/cards/__sort-button/cards__sort-button.css);
 @import url(../blocks/cards/__program/cards__program.css);
 @import url(../blocks/cards/__container/cards__container.css);
 @import url(../blocks/sorting-form/sorting-form.css);
@@ -125,3 +104,7 @@
 @import url(../blocks/card/__description/card__description.css);
 @import url(../blocks/card/__description-container/card__description-container.css);
 @import url(../blocks/card/__contact-button/card__contact-button.css);
+@import url(../blocks/card-popup-wrapper/card-popup-wrapper.css);
+@import url(../blocks/card-popup-wrapper/__container/card-popup-wrapper__container.css);
+@import url(../blocks/opened/opened.css);
+@import url(../blocks/extended/extended.css);

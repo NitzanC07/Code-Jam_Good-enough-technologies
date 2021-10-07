@@ -1,29 +1,36 @@
 export class Card {
-  constructor(cardData, { handleContactOpen }) {
+  constructor(cardData, { handleContactOpen, handleClick }) {
     this._cardData = cardData;
     this._handleContactOpen = handleContactOpen;
-
+    this._handleClick = handleClick;
   }
 
   _setEventListeners() {
     this._contactBtn.addEventListener('click', this._handleContactOpen);
+    this._card.addEventListener('click', this._handleClick);
   }
 
-  _getTemplate() {
+  _getCardTemplate() {
     return document.querySelector('#card-template')
       .content
       .querySelector('.card')
       .cloneNode(true);
   }
 
+  _getTagTemplate() {
+    return document.querySelector('#tag-template')
+      .content
+      .querySelector('.card__tag')
+      .cloneNode(true);
+  }
+
   _setCardElements() {
-    this._card = this._getTemplate();
+    this._card = this._getCardTemplate();
     this._cardImg = this._card.querySelector('.card__image');
     this._cardTitle = this._card.querySelector('.card__title');
     this._cardSubtitle = this._card.querySelector('.card__subtitle');
     this._cardDescription = this._card.querySelector('.card__description');
-    this._cardTagsContaienr = this._card.querySelector('.card__tag');
-    this._tagArray = Array.from(this._card.querySelectorAll('.card__content-tag'));
+    this._cardTagsContainer = this._card.querySelector('.card__tags');
     this._contactBtn = this._card.querySelector('.card__contact-button');
   }
 
@@ -35,10 +42,11 @@ export class Card {
     this._cardSubtitle.textContent = this._cardData.subtitle;
     this._cardDescription.textContent = this._cardData.description;
 
-    for (let i = 0; i < this._tagArray.length; i++) {
-
-      this._tagArray[i].textContent = this._cardData.contentTag[i];
-    }
+    this._cardData.interestTag.forEach(tag => {
+      const newInterest = this._getTagTemplate();
+      newInterest.textContent = tag;
+      this._cardTagsContainer.append(newInterest);
+    });
 
     this._setEventListeners();
     return this._card;

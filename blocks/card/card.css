@@ -7,6 +7,7 @@
   background-color: #fff;
   border: 1px solid #000;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .card:first-of-type {
