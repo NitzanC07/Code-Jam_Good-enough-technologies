@@ -62,7 +62,6 @@
 @import url(../blocks/outgoing-message/__img/outgoing-message__img.css);
 @import url(../blocks/outgoing-message/__text/outgoing-message__text.css);
 @import url(../blocks/outgoing-message/__time/outgoing-message__text.css);
-@import url(../blocks/opened/opened.css);
 @import url(../blocks/chat-button/chat-button.css);
 @import url(../blocks/chat-button/__icon/chat-button__icon.css);
 @import url(../blocks/rotate/rotate.css);
@@ -84,3 +83,5 @@
 @import url(../blocks/card/__description/card__description.css);
 @import url(../blocks/card/__description-container/card__description-container.css);
 @import url(../blocks/card/__contact-button/card__contact-button.css);
+@import url(../blocks/card-popup-wrapper/card-popup-wrapper.css);
+@import url(../blocks/opened/opened.css);

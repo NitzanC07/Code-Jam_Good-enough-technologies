@@ -1,8 +1,8 @@
 import { Card } from "./Card.js"
 import OutgoingMessage from "./OutgoingMessage.js";
+import Section from "./Section.js";
 import { initialCards } from "./initialCards.js";
 
-const cardsContainer = document.querySelector(".cards__container");
 const profilePopup = document.querySelector('.profile-popup');
 const profileSettingsBtn = document.querySelector('.header__settings');
 const chatBtn = document.querySelector('.chat-button');
@@ -15,10 +15,17 @@ const chatTime = document.querySelector('.chat-popup__time');
 const chatBtnIcon = document.querySelector('.chat-button__icon');
 const settingIcon = document.querySelector('.header__settings-icon');
 const currentTime = new Date();
+const popupWrapper = document.querySelector('.card-popup-wrapper');
 chatTime.textContent = `TODAY AT ${currentTime.getHours()}:${currentTime.getMinutes()}`
 
 const createMessage = (content, image) => {
   return new OutgoingMessage({ content: content, userImage: image, time: currentTime }).createMessage();
+}
+
+const createCard = (cardData) => {
+  return new Card(cardData, {
+    handleContactOpen: openChat
+  }).createCard();
 }
 
 const toggleSettings = () => {
@@ -30,6 +37,11 @@ const toggleSettings = () => {
 const toggleChat = () => {
   chatWindow.classList.toggle('opened');
   chatBtnIcon.classList.toggle('rotate');
+}
+
+const openChat = () => {
+  chatWindow.classList.add('opened');
+  chatBtnIcon.classList.add('rotate');
 }
 
 const scrollToBottom = () => {
@@ -48,11 +60,12 @@ chatPopupContainer.addEventListener('submit', sendMessage);
 profileSettingsBtn.addEventListener('click', toggleSettings);
 chatBtn.addEventListener('click', toggleChat);
 
-initialCards.forEach((cardData) => {
-  cardsContainer.append(new Card(cardData, {
-    handleContactOpen: () => {
-      chatWindow.classList.add('opened');
-      chatBtnIcon.classList.add('rotate');
-    }
-  }).createCard());
-});
+const cardList = new Section({
+  items: initialCards,
+  renderer: (cardData) => {
+    const newCard = createCard(cardData);
+    cardList.addItem(newCard);
+  }
+}, ".cards__container");
+
+cardList.renderer();
