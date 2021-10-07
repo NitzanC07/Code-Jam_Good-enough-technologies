@@ -15,9 +15,9 @@ export const initialCards = [{
     description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
   },
   {
-    imageSrc: "./images/image.svg",
-    imageAlt: "Profile picture",
-    title: "User Name",
+    imageSrc: "./images/card-bessie.png",
+    imageAlt: "Bessie Cooper",
+    title: "Bessie Cooper",
     subtitle: "Student at Yandex Praktikum",
     interestTag: ["interest", "interest", "interest", "interest"],
     description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
