@@ -2,7 +2,7 @@ export default class OutgoingMessage {
   constructor({ content, userImage, time }) {
     this._content = content;
     this._userImage = userImage;
-    this._time = `${time.getHours()}:${time.getMinutes()}`;
+    this._time = time;
   }
 
   _getTemplate() {

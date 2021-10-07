@@ -6,7 +6,9 @@ export class Card {
   }
 
   _setEventListeners() {
-    this._contactBtn.addEventListener('click', this._handleContactOpen);
+    this._contactBtn.addEventListener('click', () => {
+      this._handleContactOpen(this._cardData);
+    });
     this._card.addEventListener('click', this._handleClick);
   }
 
