@@ -3,29 +3,48 @@ import OutgoingMessage from "./OutgoingMessage.js";
 import Section from "./Section.js";
 import { initialCards } from "./initialCards.js";
 import Chat from "./Chat.js";
+import CardPopup from "./cardPopup.js";
 
 const cardsContainer = document.querySelector('.cards__container');
 const profilePopup = document.querySelector('.profile-popup');
 const profileSettingsBtn = document.querySelector('.header__settings');
 const chatBtn = document.querySelector('.chat-button');
-const chatWindow = document.querySelector('.chat-popup');
-const chatPopupContainer = document.querySelector('.chat-popup__input-container');
-const chatPopupInput = document.querySelector('.chat-popup__message-input');
-const messagesContainer = document.querySelector('.chat-popup__messages');
-const userImage = document.querySelector('.profile-popup__img').src;
-const chatTime = document.querySelector('.chat-popup__time');
-const chatBtnIcon = document.querySelector('.chat-button__icon');
+export const userImage = document.querySelector('.profile-popup__img').src;
 const settingIcon = document.querySelector('.header__settings-icon');
-const currentTime = new Date();
 const pageBody = document.querySelector('.page');
-const popupWrapper = document.querySelector('.card-popup-wrapper');
-const popupWrapperContainer = document.querySelector('.card-popup-wrapper__container');
-chatTime.textContent = `TODAY AT ${currentTime.getHours()}:${currentTime.getMinutes()}`
 const sortButton = document.querySelector('.sorting-form__submit-button');
 const studyDropdownValue = document.querySelector('#field-of-study');
 const dropDownForm = document.querySelector('.sorting-form');
-const createMessage = (content, image) => {
-  return new OutgoingMessage({ content: content, userImage: image, time: currentTime }).createMessage();
+export const currentTime = new Date();
+
+export const hourFix = (currentTime) => {
+  if (currentTime.getHours() < 10) {
+    return `0${currentTime.getHours()}`
+  } else return currentTime.getHours();
+}
+
+export const minuteFix = (currentTime) => {
+  if (currentTime.getMinutes() < 10) {
+    return `0${currentTime.getMinutes()}`
+  } else return currentTime.getMinutes();
+}
+
+const cardPopup = new CardPopup({
+  handleEscClose: (evt) => {
+    if (evt.key === 'Escape') {
+      cardPopup.close();
+    }
+  },
+  handleClickClose: (evt) => {
+    if (evt.target === document.querySelector('.card-popup-wrapper')) {
+      cardPopup.close();
+    }
+  }
+
+});
+
+export const createMessage = (content, image, time) => {
+  return new OutgoingMessage({ content: content, userImage: image, time: time }).createMessage();
 }
 
 const createSection = (container, parameter) => {
@@ -39,12 +58,14 @@ const createSection = (container, parameter) => {
 
 const createCard = (cardData) => {
   return new Card(cardData, {
-    handleContactOpen: openChat,
+    handleContactOpen: (cardData) => {
+      openChat(cardData);
+    },
     handleClick: (evt) => {
-      const cardPopup = evt.target.closest('.card').cloneNode(true);
-      popupWrapperContainer.append(cardPopup);
-      popupWrapperContainer.querySelector('.card__description-container').classList.add('extended');
-      popupWrapper.classList.add('opened');
+      if (!evt.target.classList.contains('card__contact-button')) {
+        cardPopup.createPopup(evt);
+        cardPopup.open();
+      }
     }
   }).createCard();
 }
@@ -55,37 +76,48 @@ const toggleSettings = () => {
 
 }
 
-const toggleChat = () => {
-  chatWindow.classList.toggle('opened');
-  chatBtnIcon.classList.toggle('rotate');
+const createChat = (data) => {
+  const newChat = new Chat(data);
+  pageBody.append(newChat.createChat(data));
+  newChat.open();
+}
 
+function check(chatArray, cardData) {
+  chatArray.forEach(chat => {
+    if (chat.querySelector('.chat-popup__name').textContent === cardData.title) {
+      return true;
+    }
+  });
+  return false;
 }
 
 const openChat = (cardData) => {
-  const newChat = new Chat(cardData);
-  pageBody.append(newChat.createChat());
-  chatWindow.classList.add('opened');
-  chatBtnIcon.classList.add('rotate');
-}
+  const chatArray = Array.from(document.querySelectorAll('.chat-popup'));
+  if (chatArray.length === 0) {
+    createChat(cardData);
+  } else {
+    console.log(check(chatArray, cardData));
+    createCard(cardData);
+  }
 
-const scrollToBottom = () => {
-  messagesContainer.scrollTop = messagesContainer.scrollHeight;
-}
 
-const sendMessage = (evt) => {
-  evt.preventDefault();
-  messagesContainer.append(createMessage(chatPopupInput.value, userImage));
-  chatPopupInput.value = "";
-  scrollToBottom();
 }
-
-chatPopupContainer.addEventListener('submit', sendMessage);
 
 profileSettingsBtn.addEventListener('click', toggleSettings);
-chatBtn.addEventListener('click', toggleChat);
 
 const cardList = createSection(".cards__container", '');
 cardList.renderer();
+
+const closeChats = () => {
+  const chatArray = Array.from(document.querySelectorAll('.chat-popup'));
+  chatArray.forEach(chat => {
+    if (chat.classList.contains('opened')) {
+      chat.classList.remove('opened');
+    }
+  });
+}
+
+chatBtn.addEventListener('click', closeChats);
 
 sortButton.addEventListener('click', sortList);
 

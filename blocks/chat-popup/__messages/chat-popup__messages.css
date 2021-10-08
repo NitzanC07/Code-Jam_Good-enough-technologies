@@ -2,5 +2,5 @@
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  min-height: 400px;
+  height: 400px;
 }
