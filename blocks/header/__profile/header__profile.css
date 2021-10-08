@@ -6,3 +6,9 @@
   border: none;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1060px){
+  .header__profile {
+    margin-right: 42px;
+  }
+}

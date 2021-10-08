@@ -1,12 +1,13 @@
-.cover__left-man{
+.cover__left-man_mobile{
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: 0;
+    display: none;
 }
 
 @media screen and (max-width: 1060px){
-    .cover__left-man{
-      display: none;
+    .cover__left-man_mobile{
+      display: block;
     }
   }

@@ -5,6 +5,8 @@
   line-height: 18px;
   letter-spacing: 0.2px;
   cursor: pointer;
+  text-decoration: none;
+  color: #0E1C26;
 }
 
 .header__link:last-of-type {

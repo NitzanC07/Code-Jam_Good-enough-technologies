@@ -1,0 +1,16 @@
+.header__links-icon {
+    margin-right: 26px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    display: none;
+  }
+
+  @media screen and (max-width: 1060px) {
+      .header__links-icon{
+          display: block;
+      }
+  }

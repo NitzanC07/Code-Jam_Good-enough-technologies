@@ -7,3 +7,10 @@
   align-items: center;
   border: none;
 }
+
+
+@media screen and (max-width: 1060px) {
+  .header__settings{
+      display: none;
+  }
+}

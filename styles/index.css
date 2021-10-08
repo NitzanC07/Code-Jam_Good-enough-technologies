@@ -13,6 +13,7 @@
 @import url(../blocks/header/__profile-icon/header__profile-icon.css);
 @import url(../blocks/header/__setting-icon/header__settings-icon.css);
 @import url(../blocks/header/__title/header__title.css);
+@import url(../blocks/header/__links-icon/header__links-icon.css);
 @import url(../blocks/cover/cover.css);
 @import url(../blocks/cover/__title/cover__title.css);
 @import url(../blocks/cover/__subtitle/cover__subtitle.css);
@@ -20,7 +21,9 @@
 @import url(../blocks/cover/__button-find/cover__button-find.css);
 @import url(../blocks/cover/__button-learn/cover__button-learn.css);
 @import url(../blocks/cover/__left-man/cover__left-man.css);
+@import url(../blocks/cover/__left-man_mobile/cover__left-man_mobile.css);
 @import url(../blocks/cover/__right-man/cover__right-man.css);
+@import url(../blocks/cover/__right-man_mobile/cover__right-man_mobile.css);
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/cards/__container/cards__container.css);
 @import url(../blocks/cards/__title/cards__title.css);
