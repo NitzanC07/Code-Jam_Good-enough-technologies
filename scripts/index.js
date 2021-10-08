@@ -32,12 +32,12 @@ export const minuteFix = (currentTime) => {
 const cardPopup = new CardPopup({
   handleEscClose: (evt) => {
     if (evt.key === 'Escape') {
-      cardPopup.close();
+      CardPopup.close();
     }
   },
   handleClickClose: (evt) => {
     if (evt.target === document.querySelector('.card-popup-wrapper')) {
-      cardPopup.close();
+      CardPopup.close();
     }
   }
 
@@ -63,8 +63,8 @@ const createCard = (cardData) => {
     },
     handleClick: (evt) => {
       if (!evt.target.classList.contains('card__contact-button')) {
-        cardPopup.createPopup(evt);
-        cardPopup.open();
+        CardPopup.createPopup(evt);
+        CardPopup.open();
       }
     }
   }).createCard();
