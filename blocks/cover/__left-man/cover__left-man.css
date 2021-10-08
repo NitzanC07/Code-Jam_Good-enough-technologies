@@ -1,6 +1,6 @@
 .cover__left-man{
     position: absolute;
-    left: 0;
+    left: -30px;
     bottom: 0;
     z-index: 0;
 }
