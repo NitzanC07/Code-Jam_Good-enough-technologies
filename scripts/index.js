@@ -14,6 +14,7 @@ const settingIcon = document.querySelector('.header__settings-icon');
 const pageBody = document.querySelector('.page');
 const sortButton = document.querySelector('.sorting-form__submit-button');
 const studyDropdownValue = document.querySelector('#field-of-study');
+const genderDropdownValue = document.querySelector('#user-gender');
 const dropDownForm = document.querySelector('.sorting-form');
 export const currentTime = () => { return new Date(); }
 
@@ -47,13 +48,13 @@ export const createMessage = (content, image, time) => {
   return new OutgoingMessage({ content: content, userImage: image, time: time }).createMessage();
 }
 
-const createSection = (container, parameter) => {
+const createSection = (container, parameterStudy, parameterGender) => {
   return new Section({
     items: initialCards,
     renderer: (cardData) => {
       cardList.addItem(createCard(cardData));
     }
-  }, container, { parameter: parameter });
+  }, container, { parameterStudy: parameterStudy, parameterGender: parameterGender });
 }
 
 const createCard = (cardData) => {
@@ -124,7 +125,7 @@ const closeAll = (chatArray) => {
   });
 }
 
-const cardList = createSection(".cards__container", '');
+const cardList = createSection(".cards__container", '', '');
 cardList.renderer();
 
 const chatLogic = () => {
@@ -151,7 +152,7 @@ sortButton.addEventListener('click', sortList);
 function sortList(evt) {
   evt.preventDefault();
   cardsContainer.innerHTML = "";
-  const sortedList = createSection(".cards__container", studyDropdownValue.value);
+  const sortedList = createSection(".cards__container", studyDropdownValue.value, genderDropdownValue.value);
   sortedList.renderer();
   dropDownForm.reset();
 }
