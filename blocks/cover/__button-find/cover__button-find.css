@@ -1,6 +1,6 @@
 .cover__button-find {
   margin-right: 20px;
-  width: 160px;
+  width: 350px;
   height: 42px;
   background-color: #249F8D;
   border: 0;
@@ -13,4 +13,10 @@
   line-height: 18px;
   letter-spacing: 0.3px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1060px){
+  .cover__button-find{
+    margin-bottom: 52px;
+  }
 }

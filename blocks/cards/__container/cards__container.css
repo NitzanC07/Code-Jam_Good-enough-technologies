@@ -7,13 +7,13 @@
 }
 
 @media screen and (max-width: 1140px) {
-  .container {
+  .cards__container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 760px) {
-  .container {
+  .cards__container {
     grid-template-columns: 1fr;
   }
 }
