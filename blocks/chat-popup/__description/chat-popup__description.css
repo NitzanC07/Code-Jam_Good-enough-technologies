@@ -1,9 +1,10 @@
 .chat-popup__description {
   margin: 0;
+  padding: 0;
+  height: 28px;
   font-family: "Mulish Regular", Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.2px;
-  color: #373F41;
-  grid-area: description;
+  color: #fff;
 }

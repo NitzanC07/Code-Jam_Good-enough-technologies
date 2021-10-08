@@ -1,8 +1,9 @@
 .chat-popup__name {
   margin: 0;
+  padding: 0;
+  height: 23px;
   font-family: "Mulish Bold", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.2px;
-  grid-area: name;
 }

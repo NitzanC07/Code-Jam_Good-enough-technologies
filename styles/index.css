@@ -1,9 +1,6 @@
 @import url(../vendor/normalize.css);
 @import url(../fonts/fonts.css);
 @import url(../blocks/page/page.css);
-@import url(../blocks/buttons/_size-l/button_size-l.css);
-@import url(../blocks/buttons/_size-s/button_size-s.css);
-@import url(../blocks/buttons/_size-s-white/button_size-s-white.css);
 @import url(../blocks/content/content.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__container/header__container.css);
@@ -43,6 +40,7 @@
 @import url(../blocks/stories-element/__title/stories-element__title.css);
 @import url(../blocks/stories-element/__subtitle/stories-element__subtitle.css);
 @import url(../blocks/stories-element/__img/stories-element__img.css);
+@import url(../blocks/stories/__find-button/stories__find-button.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__title/footer__title.css);
 @import url(../blocks/footer/__links/footer__links.css);
@@ -70,6 +68,9 @@
 @import url(../blocks/chat-popup/__view-profile/chat-popup__view-profile.css);
 @import url(../blocks/chat-popup/__message-area/chat-popup__message-area.css);
 @import url(../blocks/chat-popup/__time/chat-popup__time.css);
+@import url(../blocks/chat-popup/__left-arrow/caht-popup__left-arrow.css);
+@import url(../blocks/chat-popup/__profile/chat-popup__profile.css);
+@import url(../blocks/chat-popup/__camera-icon/chat-popup__camera-icon.css);
 @import url(../blocks/incoming-message/incoming-message.css);
 @import url(../blocks/incoming-message/__container/incoming-message__container.css);
 @import url(../blocks/incoming-message/__img/incoming-message__img.css);
@@ -84,6 +85,7 @@
 @import url(../blocks/outgoing-message/__img/outgoing-message__img.css);
 @import url(../blocks/outgoing-message/__text/outgoing-message__text.css);
 @import url(../blocks/outgoing-message/__time/outgoing-message__text.css);
+@import url(../blocks/opened/opened.css);
 @import url(../blocks/chat-button/chat-button.css);
 @import url(../blocks/chat-button/__icon/chat-button__icon.css);
 @import url(../blocks/rotate/rotate.css);

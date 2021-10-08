@@ -1,14 +1,14 @@
 .chat-button {
-  width: 375px;
+  width: 400px;
   height: 52px;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #BDBDBD;
+  background-color: #57a9e4;
   border: none;
   z-index: 1;
   cursor: pointer;
-  color: #4D4D4E;
+  color: #fff;
   font-family: "Mulish Bold", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 18px;

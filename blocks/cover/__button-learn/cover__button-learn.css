@@ -1,3 +1,15 @@
 .cover__button-learn {
-  
+    width: 160px;
+    height: 42px;
+    background-color: #fff;
+    border: solid 2px #249F8D;
+    border-radius: 4px;
+    color: #249F8D;
+    font-family: "Mulish", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
 }

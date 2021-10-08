@@ -44,7 +44,7 @@ export class Card {
     this._cardSubtitle.textContent = this._cardData.subtitle;
     this._cardDescription.textContent = this._cardData.description;
 
-    this._cardData.interestTag.forEach(tag => {
+    this._cardData.contentTag.forEach(tag => {
       const newInterest = this._getTagTemplate();
       newInterest.textContent = tag;
       this._cardTagsContainer.append(newInterest);

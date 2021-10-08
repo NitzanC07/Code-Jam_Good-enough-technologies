@@ -1,7 +1,7 @@
 import { hourFix, minuteFix } from "./index.js";
 import { createMessage } from "./index.js";
 import { currentTime } from "./index.js";
-
+import { userImage } from "./index.js";
 export default class Chat {
   constructor(userData) {
     this._userData = userData;
@@ -14,7 +14,7 @@ export default class Chat {
   _setEventListeners() {
     this._chatInputForm.addEventListener('submit', (evt) => {
       evt.preventDefault();
-      this._messagesContainer.append(createMessage(this._chatInput.value, this._userData.imageSrc, `${hourFix(currentTime)}:${minuteFix(currentTime)}`));
+      this._messagesContainer.append(createMessage(this._chatInput.value, userImage, `${hourFix(currentTime)}:${minuteFix(currentTime)}`));
       this._chatInput.value = "";
       this._scrollToBottom();
     });

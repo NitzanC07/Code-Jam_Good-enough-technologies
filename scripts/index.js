@@ -9,7 +9,7 @@ const cardsContainer = document.querySelector('.cards__container');
 const profilePopup = document.querySelector('.profile-popup');
 const profileSettingsBtn = document.querySelector('.header__settings');
 const chatBtn = document.querySelector('.chat-button');
-const userImage = document.querySelector('.profile-popup__img').src;
+export const userImage = document.querySelector('.profile-popup__img').src;
 const settingIcon = document.querySelector('.header__settings-icon');
 const pageBody = document.querySelector('.page');
 const sortButton = document.querySelector('.sorting-form__submit-button');
@@ -76,18 +76,31 @@ const toggleSettings = () => {
 
 }
 
-const openChat = (cardData) => {
-
-  const newChat = new Chat(cardData);
-  pageBody.append(newChat.createChat(cardData));
+const createChat = (data) => {
+  const newChat = new Chat(data);
+  pageBody.append(newChat.createChat(data));
   newChat.open();
 }
 
-const sendMessage = (evt) => {
-  evt.preventDefault();
-  messagesContainer.append(createMessage(chatPopupInput.value, userImage));
-  chatPopupInput.value = "";
-  scrollToBottom();
+function check(chatArray, cardData) {
+  chatArray.forEach(chat => {
+    if (chat.querySelector('.chat-popup__name').textContent === cardData.title) {
+      return true;
+    }
+  });
+  return false;
+}
+
+const openChat = (cardData) => {
+  const chatArray = Array.from(document.querySelectorAll('.chat-popup'));
+  if (chatArray.length === 0) {
+    createChat(cardData);
+  } else {
+    console.log(check(chatArray, cardData));
+    createCard(cardData);
+  }
+
+
 }
 
 profileSettingsBtn.addEventListener('click', toggleSettings);
@@ -95,11 +108,16 @@ profileSettingsBtn.addEventListener('click', toggleSettings);
 const cardList = createSection(".cards__container", '');
 cardList.renderer();
 
-const toggleChat = () => {
-  document.querySelector('.chat-popup').classList.toggle('opened');
+const closeChats = () => {
+  const chatArray = Array.from(document.querySelectorAll('.chat-popup'));
+  chatArray.forEach(chat => {
+    if (chat.classList.contains('opened')) {
+      chat.classList.remove('opened');
+    }
+  });
 }
 
-chatBtn.addEventListener('click', toggleChat);
+chatBtn.addEventListener('click', closeChats);
 
 sortButton.addEventListener('click', sortList);
 

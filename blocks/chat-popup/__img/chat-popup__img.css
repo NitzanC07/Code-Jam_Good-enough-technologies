@@ -1,4 +1,5 @@
 .chat-popup__img {
+  margin: 20px 18px;
   width: 64px;
   height: 64px;
   object-fit: cover;
