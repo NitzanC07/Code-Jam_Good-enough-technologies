@@ -14,6 +14,7 @@ const settingIcon = document.querySelector('.header__settings-icon');
 const pageBody = document.querySelector('.page');
 const sortButton = document.querySelector('.sorting-form__submit-button');
 const studyDropdownValue = document.querySelector('#field-of-study');
+const genderDropdownValue = document.querySelector('#user-gender');
 const dropDownForm = document.querySelector('.sorting-form');
 export const currentTime = () => { return new Date(); }
 
@@ -47,13 +48,13 @@ export const createMessage = (content, image, time) => {
   return new OutgoingMessage({ content: content, userImage: image, time: time }).createMessage();
 }
 
-const createSection = (container, parameter) => {
+const createSection = (container, parameterStudy, parameterGender) => {
   return new Section({
     items: initialCards,
     renderer: (cardData) => {
       cardList.addItem(createCard(cardData));
     }
-  }, container, { parameter: parameter });
+  }, container, { parameterStudy: parameterStudy, parameterGender: parameterGender });
 }
 
 const createCard = (cardData) => {
@@ -96,36 +97,44 @@ const openChat = (cardData) => {
     createChat(cardData);
   } else if (chatArray.length > 0) {
     if (!chatExists(chatArray, cardData)) {
+      closeAll(chatArray);
       createChat(cardData);
     } else if (chatExists(chatArray, cardData)) {
-      chatLogic();
+      closeAll(chatArray);
       chatArray.forEach(chat => {
         if (chat.querySelector('.chat-popup__name').textContent === cardData.title) {
           chat.classList.add('opened');
           document.querySelector('.chat-button__icon').classList.add('rotate');
         }
       });
-
     }
   }
 }
 
 profileSettingsBtn.addEventListener('click', toggleSettings);
 
-const cardList = createSection(".cards__container", '');
+let lastClosed = '';
+
+const closeAll = (chatArray) => {
+  chatArray.forEach(chat => {
+    if (chat.classList.contains('opened')) {
+      chat.classList.remove('opened');
+      lastClosed = chat;
+      document.querySelector('.chat-button__icon').classList.remove('rotate');
+    }
+  });
+}
+
+const cardList = createSection(".cards__container", '', '');
 cardList.renderer();
 
 const chatLogic = () => {
   const chatArray = Array.from(document.querySelectorAll('.chat-popup'));
-  if (!checkOpened(chatArray)) {
-    chatArray[chatArray.length - 1].classList.add('opened');
+  if (!checkOpened(chatArray) && chatArray.length > 0) {
+    lastClosed.classList.add('opened');
+    document.querySelector('.chat-button__icon').classList.add('rotate');
   } else if (checkOpened(chatArray)) {
-    chatArray.forEach(chat => {
-      if (chat.classList.contains('opened')) {
-        chat.classList.remove('opened');
-        document.querySelector('.chat-button__icon').classList.remove('rotate');
-      }
-    });
+    closeAll(chatArray);
   }
 }
 
@@ -143,7 +152,7 @@ sortButton.addEventListener('click', sortList);
 function sortList(evt) {
   evt.preventDefault();
   cardsContainer.innerHTML = "";
-  const sortedList = createSection(".cards__container", studyDropdownValue.value);
+  const sortedList = createSection(".cards__container", studyDropdownValue.value, genderDropdownValue.value);
   sortedList.renderer();
   dropDownForm.reset();
 }
