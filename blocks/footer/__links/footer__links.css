@@ -3,3 +3,12 @@
     padding: 0;
     margin: 47px 0;
 }
+
+@media screen and (max-width: 1060px){
+    .footer__links{
+      display: flex;
+      justify-content: space-between;
+      margin: 0 15px 42px;
+    }
+  }
+  

@@ -11,3 +11,14 @@
   color: #757575;   
   border-radius: 4px;
 }
+
+@media screen and (max-width: 1060px){
+  .sorting-form__dropdown-list{
+    margin-bottom: 24px;
+    width: 350px;
+  }
+
+  .sorting-form__dropdown-list:last-of-type{
+    margin-bottom: 48px;
+  }
+}

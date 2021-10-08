@@ -6,3 +6,11 @@
   letter-spacing: 0.2px;
   color: #373F41;
 }
+
+@media screen and (max-width: 1060px){
+  .stories__title{
+    font-size: 24px;
+    line-height: 30px;
+    margin: 80px 0 64px;
+  }
+}

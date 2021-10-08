@@ -15,3 +15,10 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 1060px){
+    .stories__find-button{
+      margin-bottom: 80px;
+    }
+  }
+  
+

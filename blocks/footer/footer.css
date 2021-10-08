@@ -4,3 +4,10 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+@media screen and (max-width: 1060px){
+    .footer{
+      flex-direction: column;
+    }
+  }
+  

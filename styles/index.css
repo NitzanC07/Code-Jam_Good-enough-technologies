@@ -55,6 +55,7 @@
 @import url(../blocks/footer/__social-text/footer__social-text.css);
 @import url(../blocks/footer/__social-logos/footer__social-logos.css);
 @import url(../blocks/footer/__social-logo/footer__social-logo.css);
+@import url(../blocks/footer/__media/footer__media.css);
 @import url(../blocks/profile-popup/profile-popup.css);
 @import url(../blocks/profile-popup/__info-container/profile-popup__info-container.css);
 @import url(../blocks/profile-popup/__links/profile-popup__links.css);

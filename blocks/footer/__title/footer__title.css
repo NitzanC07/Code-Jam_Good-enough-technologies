@@ -7,3 +7,10 @@
     margin: 112px 0;
     color: #249F8D
 }
+
+@media screen and (max-width: 1060px){
+    .footer__title{
+      margin: 41px 15px 28px;
+    }
+  }
+  
