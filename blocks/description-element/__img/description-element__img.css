@@ -3,3 +3,9 @@
   width: 100px;
   height: 100px;
 }
+
+@media screen and (max-width: 1060px){
+  .description-element__img{
+    margin-bottom: 36px;
+  }
+}

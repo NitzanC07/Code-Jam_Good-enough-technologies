@@ -7,3 +7,9 @@
   letter-spacing: 0.2px;
   text-align: center;
 }
+
+@media screen and (max-width: 1060px){
+  .description-element__subtitle{
+    margin-bottom: 100px;
+  }
+}

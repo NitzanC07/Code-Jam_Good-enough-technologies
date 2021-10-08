@@ -5,3 +5,10 @@
   justify-content: space-between;
   margin-bottom: 156px;
 }
+
+@media screen and (max-width: 1060px){
+  .description__row{
+    flex-direction: column;
+    align-items: center;
+  }
+}
