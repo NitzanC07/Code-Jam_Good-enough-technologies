@@ -2,6 +2,7 @@ import { hourFix, minuteFix } from "./index.js";
 import { createMessage } from "./index.js";
 import { currentTime } from "./index.js";
 import { userImage } from "./index.js";
+
 export default class Chat {
   constructor(userData) {
     this._userData = userData;
@@ -56,9 +57,5 @@ export default class Chat {
   open() {
     this._chat.classList.add('opened');
     this._chatBtnIcon.classList.add('rotate');
-  }
-
-  close() {
-
   }
 }

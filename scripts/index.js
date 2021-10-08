@@ -15,18 +15,18 @@ const pageBody = document.querySelector('.page');
 const sortButton = document.querySelector('.sorting-form__submit-button');
 const studyDropdownValue = document.querySelector('#field-of-study');
 const dropDownForm = document.querySelector('.sorting-form');
-export const currentTime = new Date();
+export const currentTime = () => { return new Date(); }
 
-export const hourFix = (currentTime) => {
-  if (currentTime.getHours() < 10) {
-    return `0${currentTime.getHours()}`
-  } else return currentTime.getHours();
+export const hourFix = () => {
+  if (currentTime().getHours() < 10) {
+    return `0${currentTime().getHours()}`
+  } else return currentTime().getHours();
 }
 
-export const minuteFix = (currentTime) => {
-  if (currentTime.getMinutes() < 10) {
-    return `0${currentTime.getMinutes()}`
-  } else return currentTime.getMinutes();
+export const minuteFix = () => {
+  if (currentTime().getMinutes() < 10) {
+    return `0${currentTime().getMinutes()}`
+  } else return currentTime().getMinutes();
 }
 
 const cardPopup = new CardPopup({
@@ -82,25 +82,32 @@ const createChat = (data) => {
   newChat.open();
 }
 
-function check(chatArray, cardData) {
-  chatArray.forEach(chat => {
+function chatExists(chatArray, cardData) {
+  return chatArray.some(chat => {
     if (chat.querySelector('.chat-popup__name').textContent === cardData.title) {
       return true;
-    }
+    } else return false;
   });
-  return false;
 }
 
 const openChat = (cardData) => {
   const chatArray = Array.from(document.querySelectorAll('.chat-popup'));
   if (chatArray.length === 0) {
     createChat(cardData);
-  } else {
-    console.log(check(chatArray, cardData));
-    createCard(cardData);
+  } else if (chatArray.length > 0) {
+    if (!chatExists(chatArray, cardData)) {
+      createChat(cardData);
+    } else if (chatExists(chatArray, cardData)) {
+      chatLogic();
+      chatArray.forEach(chat => {
+        if (chat.querySelector('.chat-popup__name').textContent === cardData.title) {
+          chat.classList.add('opened');
+          document.querySelector('.chat-button__icon').classList.add('rotate');
+        }
+      });
+
+    }
   }
-
-
 }
 
 profileSettingsBtn.addEventListener('click', toggleSettings);
@@ -108,17 +115,29 @@ profileSettingsBtn.addEventListener('click', toggleSettings);
 const cardList = createSection(".cards__container", '');
 cardList.renderer();
 
-const closeChats = () => {
+const chatLogic = () => {
   const chatArray = Array.from(document.querySelectorAll('.chat-popup'));
-  chatArray.forEach(chat => {
+  if (!checkOpened(chatArray)) {
+    chatArray[chatArray.length - 1].classList.add('opened');
+  } else if (checkOpened(chatArray)) {
+    chatArray.forEach(chat => {
+      if (chat.classList.contains('opened')) {
+        chat.classList.remove('opened');
+        document.querySelector('.chat-button__icon').classList.remove('rotate');
+      }
+    });
+  }
+}
+
+const checkOpened = (chatArray) => {
+  return chatArray.some(chat => {
     if (chat.classList.contains('opened')) {
-      chat.classList.remove('opened');
-    }
+      return true;
+    } else return false;
   });
 }
 
-chatBtn.addEventListener('click', closeChats);
-
+chatBtn.addEventListener('click', chatLogic);
 sortButton.addEventListener('click', sortList);
 
 function sortList(evt) {
