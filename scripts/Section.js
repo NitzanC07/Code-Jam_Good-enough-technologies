@@ -4,7 +4,6 @@ export default class Section {
     this._renderer = renderer;
     this._parameter = parameter;
     this._container = document.querySelector(container);
-    console.log(this._parameter);
   }
 
   renderer() {

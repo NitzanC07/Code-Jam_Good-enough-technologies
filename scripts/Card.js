@@ -29,6 +29,7 @@ export class Card {
     this._cardImg = this._card.querySelector('.card__image');
     this._cardTitle = this._card.querySelector('.card__title');
     this._cardSubtitle = this._card.querySelector('.card__subtitle');
+    this._cardCity = this._card.querySelector('.card__city');
     this._cardDescription = this._card.querySelector('.card__description');
     this._cardTagsContainer = this._card.querySelector('.card__tags');
     this._contactBtn = this._card.querySelector('.card__contact-button');
@@ -40,9 +41,10 @@ export class Card {
     this._cardImg.alt = this._cardData.imageAlt;
     this._cardTitle.textContent = this._cardData.title;
     this._cardSubtitle.textContent = this._cardData.subtitle;
+    this._cardCity.textContent = this._cardData.city;
     this._cardDescription.textContent = this._cardData.description;
 
-    this._cardData.interestTag.forEach(tag => {
+    this._cardData.contentTag.forEach(tag => {
       const newInterest = this._getTagTemplate();
       newInterest.textContent = tag;
       this._cardTagsContainer.append(newInterest);
