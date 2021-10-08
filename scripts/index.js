@@ -96,36 +96,44 @@ const openChat = (cardData) => {
     createChat(cardData);
   } else if (chatArray.length > 0) {
     if (!chatExists(chatArray, cardData)) {
+      closeAll(chatArray);
       createChat(cardData);
     } else if (chatExists(chatArray, cardData)) {
-      chatLogic();
+      closeAll(chatArray);
       chatArray.forEach(chat => {
         if (chat.querySelector('.chat-popup__name').textContent === cardData.title) {
           chat.classList.add('opened');
           document.querySelector('.chat-button__icon').classList.add('rotate');
         }
       });
-
     }
   }
 }
 
 profileSettingsBtn.addEventListener('click', toggleSettings);
 
+let lastClosed = '';
+
+const closeAll = (chatArray) => {
+  chatArray.forEach(chat => {
+    if (chat.classList.contains('opened')) {
+      chat.classList.remove('opened');
+      lastClosed = chat;
+      document.querySelector('.chat-button__icon').classList.remove('rotate');
+    }
+  });
+}
+
 const cardList = createSection(".cards__container", '');
 cardList.renderer();
 
 const chatLogic = () => {
   const chatArray = Array.from(document.querySelectorAll('.chat-popup'));
-  if (!checkOpened(chatArray)) {
-    chatArray[chatArray.length - 1].classList.add('opened');
+  if (!checkOpened(chatArray) && chatArray.length > 0) {
+    lastClosed.classList.add('opened');
+    document.querySelector('.chat-button__icon').classList.add('rotate');
   } else if (checkOpened(chatArray)) {
-    chatArray.forEach(chat => {
-      if (chat.classList.contains('opened')) {
-        chat.classList.remove('opened');
-        document.querySelector('.chat-button__icon').classList.remove('rotate');
-      }
-    });
+    closeAll(chatArray);
   }
 }
 
