@@ -3,7 +3,7 @@ import OutgoingMessage from "./OutgoingMessage.js";
 import Section from "./Section.js";
 import { initialCards } from "./initialCards.js";
 import Chat from "./Chat.js";
-import CardPopup from "./cardPopup.js";
+import CardPopup from "./CardPopup.js";
 
 const cardsContainer = document.querySelector('.cards__container');
 const profilePopup = document.querySelector('.profile-popup');
